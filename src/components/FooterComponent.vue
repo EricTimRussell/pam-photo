@@ -13,7 +13,7 @@
     <div class="row justify-content-center">
       <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
         <a class="gap-3" href="" target="_blank">
-          <span class="material-symbols-outlined">
+          <span class="d-flex justify-content-center fs-lg material-symbols-outlined">
             thumb_up
           </span>
           <p>Photo Social Media Site Link</p>
@@ -21,7 +21,7 @@
       </div>
       <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
         <a class="gap-3" href="mailto:">
-          <span class="fs-lg material-symbols-outlined">
+          <span class="d-flex justify-content-center fs-lg material-symbols-outlined">
             mail
           </span>
           <p>Email Address</p>
@@ -29,7 +29,7 @@
       </div>
       <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
         <a class="gap-3" href="">
-          <span class="fs-lg material-symbols-outlined">
+          <span class="d-flex justify-content-center fs-lg material-symbols-outlined">
             policy
           </span>
           <p>Policies</p>

@@ -15,10 +15,10 @@
       </div>
       <div class="d-flex col-md-3 col-sm-12 gap-5 order-sm-3 order-md-2">
         <router-link to="/collections">
-          <h2 class="text-2xl">Collections</h2>
+          <h2 class="links text-2xl">Collections</h2>
         </router-link>
         <router-link to="/market">
-          <h2 class="text-2xl">Market</h2>
+          <h2 class="links text-2xl">Market</h2>
         </router-link>
       </div>
     </nav>
@@ -51,8 +51,8 @@ export default {
 }
 
 .prof-avatar {
-  color: green;
-  background-color: white;
+  color: blue;
+  background-color: beige;
   border-radius: 50%;
 }
 
