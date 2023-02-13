@@ -28,12 +28,13 @@
         </a>
       </div>
       <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
-        <a class="gap-3" href="">
-          <span class="d-flex justify-content-center fs-lg material-symbols-outlined">
-            policy
-          </span>
-          <p>Policies</p>
-        </a>
+
+        <span class="d-flex justify-content-center fs-lg material-symbols-outlined" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop">
+          policy
+        </span>
+        <p>Policies</p>
+
       </div>
     </div>
   </section>
