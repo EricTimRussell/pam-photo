@@ -1,11 +1,12 @@
 <template>
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="policies" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="policies" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Terms of Use</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title fs-5" id="policies">Terms of Use</h1>
+          <button title="close modal" type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quas esse nam excepturi quaerat iusto,

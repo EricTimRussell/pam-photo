@@ -7,11 +7,11 @@
         </router-link>
       </div>
       <div class="col-md-3 col-6 order-sm-2 order-md-3 d-flex justify-content-end">
-        <button class="btn-blank">
-          <span class="material-symbols-outlined fs-xl selectable prof-avatar">
-            account_circle
+        <router-link to="/cart" class="btn-blank">
+          <span class="material-symbols-outlined fs-xl selectable cart-avatar">
+            shopping_cart
           </span>
-        </button>
+        </router-link>
       </div>
       <div class="d-flex col-md-3 col-sm-12 gap-5 order-sm-3 order-md-2">
         <router-link to="/collections">
@@ -45,19 +45,18 @@ export default {
     height: 14vh;
   }
 
-  .prof-avatar {
+  .cart-avatar {
     font-size: 32px;
   }
 }
 
-.prof-avatar {
+.cart-avatar {
   color: blue;
-  background-color: beige;
-  border-radius: 50%;
 }
 
-.prof-avatar:hover {
+.cart-avatar:hover {
   background-color: greenyellow;
+  border-radius: 50%;
 }
 
 a {
