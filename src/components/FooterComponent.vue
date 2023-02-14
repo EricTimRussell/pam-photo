@@ -28,13 +28,11 @@
         </a>
       </div>
       <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
-
-        <span class="d-flex justify-content-center fs-lg material-symbols-outlined" data-bs-toggle="modal"
+        <span class="d-flex justify-content-center fs-lg material-symbols-outlined selectable" data-bs-toggle="modal"
           data-bs-target="#policies">
           policy
         </span>
         <p>Policies</p>
-
       </div>
     </div>
   </section>
