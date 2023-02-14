@@ -112,6 +112,7 @@
       <div class="col-12 d-flex justify-content-center">
         <span class="section-divider"></span>
       </div>
+      <!-- TODO add image if mom want it -->
       <div class="col-md-7 d-flex pt-3 px-4">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, odit
           quos
@@ -128,12 +129,8 @@
 </template>
 
 <script setup>
-// import { useFirestore, useCollection } from 'vuefire'
-// import { collection } from 'firebase/firestore'
 
-// const db = useFirestore()
 
-// const photoCollection = useCollection(collection(db, 'photos'))
 
 </script>
 

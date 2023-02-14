@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { VueFire } from "vuefire"
+import { firebaseApp } from "@/firebase.js"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.js"
@@ -16,3 +18,8 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+app.use(VueFire, {
+  firebaseApp,
+  modules: [],
+})
