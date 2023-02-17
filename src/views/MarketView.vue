@@ -1,19 +1,21 @@
+// example-vue-component.vue
 <template>
-  <div>
-    <h1>Market Page</h1>
-  </div>
+  <button @click="showAlert">Hello world</button>
 </template>
 
 <script>
+import Pop from "../utils/Pop"
 export default {
   setup() {
 
 
-    return {}
+    return {
+      showAlert() {
+        Pop.toast("Hello")
+      },
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style scoped></style>
