@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .height {
-  height: 7vh;
+  height: 70px;
 }
 
 @media only screen and (max-width: 770px) {

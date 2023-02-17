@@ -1,18 +1,16 @@
 // example-vue-component.vue
 <template>
-  <button @click="showAlert">Hello world</button>
+  <h1>Market Page</h1>
 </template>
 
 <script>
-import Pop from "../utils/Pop"
+
 export default {
   setup() {
 
 
     return {
-      showAlert() {
-        Pop.toast("Hello")
-      },
+
     }
   }
 }
