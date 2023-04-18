@@ -1,5 +1,5 @@
 <template>
-  <section class="container-fluid bg-primary">
+  <section class="container-fluid bg-secondary">
     <div class="row justify-content-center py-2">
       <!-- section title -->
       <div class="col-12 d-flex justify-content-center">
@@ -65,5 +65,16 @@ export default {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.cart-avatar {
+  color: blue;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.cart-avatar:hover {
+  background-color: greenyellow;
+  border-radius: 50%;
 }
 </style>
