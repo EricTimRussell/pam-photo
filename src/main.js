@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { VueFire } from "vuefire"
+import { VueFire, VueFireAuth } from "vuefire"
 import { firebaseApp } from "@/firebase.js"
 
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -24,5 +24,5 @@ app.mount('#app')
 
 app.use(VueFire, {
   firebaseApp,
-  modules: [],
+  modules: [VueFireAuth()],
 })

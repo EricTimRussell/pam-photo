@@ -11,13 +11,13 @@
       <div class="carousel-container">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://thiscatdoesnotexist.com/" class="carousel-img" alt="...">
+            <img src="../assets/placeholder.jpg" class="carousel-img" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://thiscatdoesnotexist.com/" class="carousel-img" alt="...">
+            <img src="../assets/placeholder.jpg" class="carousel-img" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://thiscatdoesnotexist.com/" class="carousel-img" alt="...">
+            <img src="../assets/placeholder.jpg" class="carousel-img" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev ml" type="button" data-bs-target="#carouselButton" data-bs-slide="prev">
@@ -56,7 +56,7 @@
   </section>
 
   <!-- Featured Images -->
-  <section class="container-fluid">
+  <section class="container-fluid mb-5">
     <div class="row">
       <div class="col-12 d-flex justify-content-center pt-5">
         <h2>Featured Photo's</h2>
@@ -68,70 +68,50 @@
     <div class="row justify-content-center">
       <!-- photo row 1 -->
       <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-        <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+        <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
       </div>
       <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-        <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+        <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
       </div>
       <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-        <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+        <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
       </div>
       <!-- photo row 2 -->
       <div class="row justify-content-center">
         <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-          <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+          <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
         </div>
         <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-          <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+          <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
         </div>
         <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-          <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+          <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
         </div>
       </div>
       <!-- photo row 3 -->
       <div class="row justify-content-center">
         <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-          <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+          <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
         </div>
         <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-          <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+          <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
         </div>
         <div class="col-12 col-md-2 d-flex justify-content-center gap-5 pt-5">
-          <img class="featured-img" src="https://thiscatdoesnotexist.com/" alt="">
+          <img class="featured-img elevation" src="../assets/placeholder.jpg" alt="">
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-12 d-flex justify-content-center pt-5">
-        <h2>About Section</h2>
-      </div>
-      <div class="col-12 d-flex justify-content-center">
-        <span class="section-divider"></span>
-      </div>
-      <!-- TODO add image if mom want it -->
-      <div class="col-md-7 d-flex pt-3 px-4">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, odit
-          quos
-          ea,
-          temporibus quas obcaecati
-          expedita recusandae perspiciatis dolorem, doloremque vitae sequi. Voluptas quibusdam eveniet odio laudantium
-          nobis in est!
-          Voluptates iure, reprehenderit aspernatur expedita facilis consectetur, commodi molestias facere optio velit
-          tenetur porro sequi ipsam. Error cum rem laborum illum dolore, veniam, delectus iure ea ipsam nesciunt sunt
-          quaerat.</p>
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
+<script>
+export default {
+  setup() {
 
 
-
+    return {}
+  }
+}
 </script>
 
 <style scoped>

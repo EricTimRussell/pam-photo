@@ -34,6 +34,13 @@
         </span>
         <p>Policies</p>
       </div>
+      <div class="col-12 d-flex justify-content-center">
+        <router-link to="/sign-in" class="btn-blank">
+          <span class="material-symbols-outlined fs-lg selectable cart-avatar">
+            person
+          </span>
+        </router-link>
+      </div>
     </div>
   </section>
 </template>

@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CollectionsView from '../views/CollectionsView.vue'
-import MarketView from '../views/MarketView.vue'
-import CartView from '../views/CartView.vue'
-import AccountView from '../views/AccountView.vue'
+import AboutView from '../views/AboutView.vue'
+import SignInView from '../views/SignInView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,20 +18,15 @@ const router = createRouter({
       component: CollectionsView
     },
     {
-      path: '/market',
-      name: 'Market',
-      component: MarketView
+      path: '/about',
+      name: 'About',
+      component: AboutView
     },
     {
-      path: '/cart',
-      name: 'Cart',
-      component: CartView
+      path: '/sign-in',
+      name: 'Sign-In',
+      component: SignInView
     },
-    {
-      path: '/account',
-      name: 'Account',
-      component: AccountView
-    }
   ]
 })
 

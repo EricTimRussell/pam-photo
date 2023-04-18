@@ -3,6 +3,8 @@ import { RouterView } from 'vue-router'
 import NavbarComponent from "./components/NavbarComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 import PoliciesModalComponent from "./components/PoliciesModalComponent.vue";
+
+
 </script>
 
 <template>
@@ -22,5 +24,7 @@ import PoliciesModalComponent from "./components/PoliciesModalComponent.vue";
 </template>
 
 <style scoped>
-
+footer {
+  box-shadow: 0 2px 5px -1px #00000033, 0 5px 6px 0 #00000024, 0 1px 12px 10px #0000001f;
+}
 </style>
