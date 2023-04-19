@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router'
 import NavbarComponent from "./components/NavbarComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
-import PoliciesModalComponent from "./components/PoliciesModalComponent.vue";
+
 
 
 </script>
@@ -19,8 +19,6 @@ import PoliciesModalComponent from "./components/PoliciesModalComponent.vue";
   <footer>
     <FooterComponent />
   </footer>
-
-  <PoliciesModalComponent />
 </template>
 
 <style scoped>

@@ -1,57 +1,27 @@
 <template>
   <section class="container-fluid bg-secondary">
-    <div class="row justify-content-center py-2">
-      <!-- section title -->
-      <div class="col-12 d-flex justify-content-center">
-        <h2 class="text-4xl col-start-2">Contact</h2>
-      </div>
-      <div class="col-12 d-flex justify-content-center">
-        <span class="section-divider"></span>
-      </div>
-    </div>
-    <!-- section contact and policies -->
-    <div class="row justify-content-center">
-      <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
-        <a class="gap-3" href="" target="_blank">
-          <span class="d-flex justify-content-center fs-lg material-symbols-outlined">
-            thumb_up
-          </span>
-          <p>Photo Social Media Site Link</p>
-        </a>
-      </div>
-      <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
-        <a class="gap-3" href="mailto:">
-          <span class="d-flex justify-content-center fs-lg material-symbols-outlined">
-            mail
-          </span>
-          <p>Email Address</p>
-        </a>
-      </div>
-      <div class="d-flex justify-content-center col-12 col-md-2 pt-3">
-        <span class="d-flex justify-content-center fs-lg material-symbols-outlined selectable" data-bs-toggle="modal"
-          data-bs-target="#policies">
-          policy
-        </span>
-        <p>Policies</p>
-      </div>
-      <div class="col-12 d-flex justify-content-center">
-        <router-link to="/sign-in" class="btn-blank">
-          <span class="material-symbols-outlined fs-lg selectable cart-avatar">
+    <div class="row py-2">
+      <div class="d-flex justify-content-end col-12 pt-3">
+        <RouterLink to="/sign-in" class="btn-blank">
+          <span class="material-symbols-outlined fs-md selectable admin-login">
             person
           </span>
-        </router-link>
+        </RouterLink>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { RouterLink } from "vue-router";
 export default {
   setup() {
 
 
     return {}
-  }
+
+  },
+  components: { RouterLink }
 }
 </script>
 
@@ -67,14 +37,8 @@ a {
   color: inherit;
 }
 
-.cart-avatar {
+.admin-login {
   color: blue;
-  border-radius: 50%;
-  background-color: white;
-}
-
-.cart-avatar:hover {
-  background-color: greenyellow;
   border-radius: 50%;
 }
 </style>

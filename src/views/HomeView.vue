@@ -108,18 +108,10 @@
 </template>
 
 <script>
-
-
-import { getStorage, ref } from "firebase/storage";
 export default {
   setup() {
-    const storage = getStorage();
 
-    // Create a child reference
-    const imagesRef = ref(storage, 'images');
-    // imagesRef now points to 'images'
     return {
-      imagesRef
     }
   }
 }

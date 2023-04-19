@@ -10,7 +10,7 @@
   </div>
   <div id="nav" class="container-fluid bg-info elevation py-2">
     <nav class="row">
-      <div class="d-flex justify-content-center col-12 gap-3">
+      <div class="d-flex justify-content-center col-12 gap-5">
         <RouterLink to="/collections">
           <span class="links fs-md">Gallery</span>
         </RouterLink>
@@ -34,18 +34,17 @@ export default {
 </script>
 
 <style scoped>
-.nav-background {
-  background: linear-gradient(#51a151 10%, #daffda);
-}
-
-@media only screen and (max-width: 770px) {
-  .nav-height {
-    height: 14vh;
-  }
+#nav .router-link-active {
+  transform: scale(1.3);
+  color: blue;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:hover {
+  color: blue;
 }
 </style>
