@@ -1,39 +1,8 @@
 <template>
   <!-- HERO -->
-  <section>
-    <div id="carouselButton" class="carousel slide pt-5" data-bs-ride="true">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselButton" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselButton" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselButton" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-container">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../assets/placeholder.jpg" class="carousel-img" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/placeholder.jpg" class="carousel-img" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/placeholder.jpg" class="carousel-img" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev ml" type="button" data-bs-target="#carouselButton" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next mr" type="button" data-bs-target="#carouselButton" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <span class="material-symbols-outlined d-flex justify-content-center fs-sm selectable">
-        edit
-      </span>
-    </div>
-  </section>
+  <div>
+    <HeroComponent :carousel="carousel" />
+  </div>
 
   <!-- Introduction -->
   <section class="container-fluid">
@@ -108,12 +77,16 @@
 </template>
 
 <script>
+import HeroComponent from "../components/HeroComponent.vue";
+import { appState } from "../stores/AppState"
+import { computed } from "@vue/reactivity"
 export default {
   setup() {
-
     return {
-    }
-  }
+      carousel: computed(() => appState.carousel),
+    };
+  },
+  components: { HeroComponent }
 }
 </script>
 
