@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import CollectionsView from '../views/CollectionsView.vue'
+import GalleriesView from '../views/GalleriesView.vue'
 import AboutView from '../views/AboutView.vue'
 import SignInView from '../views/SignInView.vue'
 
@@ -13,9 +13,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/collections',
-      name: 'Collections',
-      component: CollectionsView
+      path: '/galleries',
+      name: 'Galleries',
+      component: GalleriesView
     },
     {
       path: '/about',
@@ -26,7 +26,7 @@ const router = createRouter({
       path: '/sign-in',
       name: 'Sign-In',
       component: SignInView
-    },
+    }
   ]
 })
 

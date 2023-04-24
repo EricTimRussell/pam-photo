@@ -11,7 +11,7 @@
   <div id="nav" class="container-fluid bg-info elevation py-2">
     <nav class="row">
       <div class="d-flex justify-content-center col-12 gap-5">
-        <RouterLink to="/collections">
+        <RouterLink to="/galleries">
           <span class="links fs-md">Gallery</span>
         </RouterLink>
         <RouterLink to="/about">
