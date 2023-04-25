@@ -9,7 +9,7 @@
     <div class="carousel-container">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img :src="carousel.img1" class="carousel-img" alt="...">
+          <img :src="url" class="carousel-img" alt="...">
         </div>
         <div class="carousel-item">
           <img :src="carousel.img2" class="carousel-img" alt="...">
@@ -34,27 +34,41 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
-import { carouselService } from "../services/CarouselService";
-
+import { useFileDialog } from '@vueuse/core'
+import { ref as storageRef } from 'firebase/storage'
+import { useFirebaseStorage, useStorageFile } from 'vuefire'
 export default {
   props: {
     carousel: { type: Object, required: true }
   },
   setup() {
-    async function getCarouselImages() {
-      try {
-        await carouselService.getCarouselImages()
-      } catch (error) {
-        console.error(error, "get carousel img's");
+    const { files, open } = useFileDialog()
+    const storage = useFirebaseStorage()
+    const carouselImg1 = storageRef(storage, `carouselImg1`)
+
+    const {
+      url,
+      // gives you a percentage between 0 and 1 of the upload progress
+      uploadProgress,
+      uploadError,
+      // firebase upload task
+      uploadTask,
+      upload,
+    } = useStorageFile(carouselImg1)
+
+    function uploadPicture() {
+      const data = files.value?.item(0)
+      if (data) {
+        upload(data)
       }
     }
 
-    onMounted(() => {
-      getCarouselImages()
-    })
-
-    return {}
+    return {
+      uploadPicture,
+      url,
+      uploadTask,
+      open,
+    }
   }
 }
 </script>
