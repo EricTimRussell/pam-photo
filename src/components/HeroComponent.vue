@@ -27,9 +27,6 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <span class="material-symbols-outlined d-flex justify-content-center fs-sm selectable">
-      edit
-    </span>
   </div>
 </template>
 

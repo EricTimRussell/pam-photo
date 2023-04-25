@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div v-if="user" class="container-fluid">
     <div class="row">
       <h1 class="text-center mt-5">Admin Page</h1>
       <div class="col-12 text-center mt-3">
@@ -19,16 +19,23 @@
       </div>
     </div>
   </div>
+  <div v-else>
+    <span class="fs-xl d-flex justify-content-center">
+      Admin Credentials Required
+    </span>
+  </div>
 </template>
 
 <script>
+import { useCurrentUser } from "vuefire";
 import CarouselImg1FormComponent from "../components/carousel/CarouselImg1FormComponent.vue";
 import CarouselImg2FormComponent from "../components/carousel/CarouselImg2FormComponent.vue";
 import CarouselImg3FormComponent from "../components/carousel/CarouselImg3FormComponent.vue";
 
 export default {
   setup() {
-    return {};
+    const user = useCurrentUser()
+    return { user };
   },
   components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent }
 }
