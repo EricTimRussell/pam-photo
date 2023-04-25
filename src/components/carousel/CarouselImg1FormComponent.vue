@@ -1,17 +1,14 @@
 <template>
-  <form @submit.prevent="uploadPicture">
+  <form class="d-flex justify-content-center" @submit.prevent="uploadPicture">
     <!-- disable the form while uploading -->
-    <fieldset :disabled="!!uploadTask">
-      <button type="button" @click="open({ accept: 'image/*', multiple: false })">
+    <fieldset class="d-flex flex-column align-items-center" :disabled="!!uploadTask">
+      <button class="btn btn-primary" type="button" @click="open({ accept: 'image/*', multiple: false })">
         <template v-if="files?.length === 1">
           Selected file: {{ files.item(0)!.name }} (Click to select another)
         </template>
         <template v-else> Select one picture </template>
       </button>
-
-      <br />
-
-      <button>Upload</button>
+      <button class="btn btn-success my-2">Upload</button>
     </fieldset>
   </form>
 </template>

@@ -9,13 +9,13 @@
     <div class="carousel-container">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img :src="url" class="carousel-img" alt="...">
+          <img :src="url1" class="carousel-img" alt="...">
         </div>
         <div class="carousel-item">
-          <img :src="carousel.img2" class="carousel-img" alt="...">
+          <img :src="url2" class="carousel-img" alt="...">
         </div>
         <div class="carousel-item">
-          <img :src="carousel.img3" class="carousel-img" alt="...">
+          <img :src="url3" class="carousel-img" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev ml" type="button" data-bs-target="#carouselButton" data-bs-slide="prev">
@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import { useFileDialog } from '@vueuse/core'
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
 export default {
@@ -42,34 +41,29 @@ export default {
     carousel: { type: Object, required: true }
   },
   setup() {
-    const { files, open } = useFileDialog()
     const storage = useFirebaseStorage()
     const carouselImg1 = storageRef(storage, `carouselImg1`)
+    const carouselImg2 = storageRef(storage, `carouselImg2`)
+    const carouselImg3 = storageRef(storage, `carouselImg3`)
 
     const {
-      url,
-      // gives you a percentage between 0 and 1 of the upload progress
-      uploadProgress,
-      uploadError,
-      // firebase upload task
-      uploadTask,
-      upload,
+      url: url1
     } = useStorageFile(carouselImg1)
 
-    function uploadPicture() {
-      const data = files.value?.item(0)
-      if (data) {
-        upload(data)
-      }
-    }
+    const {
+      url: url2
+    } = useStorageFile(carouselImg2)
+
+    const {
+      url: url3
+    } = useStorageFile(carouselImg3)
 
     return {
-      uploadPicture,
-      url,
-      uploadTask,
-      open,
+      url1,
+      url2,
+      url3
     }
-  }
+  },
 }
 </script>
 
