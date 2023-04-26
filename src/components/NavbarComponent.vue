@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-primary pt-2">
+  <div class="container-fluid nav-bg-top pt-2">
     <div class="row">
       <div class="d-flex justify-content-center col-12 pb-2">
         <RouterLink to="/">
@@ -8,7 +8,7 @@
       </div>
     </div>
   </div>
-  <div id="nav" class="container-fluid bg-info elevation py-2">
+  <div id="nav" class="container-fluid nav-bg-bot elevation py-2">
     <nav class="row">
       <div class="d-flex justify-content-center col-12 gap-5">
         <RouterLink to="/">

@@ -8,7 +8,7 @@
         </template>
         <template v-else> Select one picture </template>
       </button>
-      <button class="my-2 btn btn-success">Upload</button>
+      <button class="btn btn-success my-2">Upload</button>
       <span v-if="uploadProgress === 1 && files?.length === 1" class="text-success fs-md">Success</span>
     </fieldset>
   </form>
@@ -21,17 +21,13 @@ import { useFirebaseStorage, useStorageFile } from 'vuefire'
 
 const { files, open } = useFileDialog()
 const storage = useFirebaseStorage()
-const carouselImg3 = storageRef(storage, `carouselImg3`)
+const featuredImg7 = storageRef(storage, `featuredImg7`)
 
 const {
-  url,
-  // gives you a percentage between 0 and 1 of the upload progress
   uploadProgress,
-  uploadError,
-  // firebase upload task
   uploadTask,
   upload,
-} = useStorageFile(carouselImg3)
+} = useStorageFile(featuredImg7)
 
 function uploadPicture() {
   const data = files.value?.item(0)

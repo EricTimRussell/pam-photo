@@ -1,9 +1,11 @@
 <template>
-  <section class="container-fluid bg-secondary">
+  <section class="container-fluid footer-bg">
     <div class="row justify-content-end py-2">
       <div class="col-1 d-flex justify-content-end btn-group dropup">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Admin
+        <button type="button" class="bg-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="material-symbols-outlined fs-sm">
+            admin_panel_settings
+          </span>
         </button>
         <ul class="dropdown-menu">
           <li class="d-flex justify-content-center">

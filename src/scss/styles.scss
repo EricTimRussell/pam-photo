@@ -1,3 +1,28 @@
+#app {
+  background-color: #f2ffff;
+  font-family: serif;
+}
+
+:root {
+  --primary-dark: #1b91ff;
+  --primary-light: #51abff;
+  --secondary-dark: #0d3051;
+}
+
+.nav-bg-top {
+  background-color: var(--primary-dark);
+}
+
+.nav-bg-bot {
+  background-color: var(--primary-light);
+}
+
+.footer-bg {
+  background-color: var(--secondary-dark);
+}
+
+
+// Utilities
 .elevation {
   box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
 }
@@ -34,9 +59,4 @@
 
 .links:hover {
   border-bottom: 1px solid black;
-}
-
-body {
-  background-color: #f2ffff;
-  font-family: serif
 }

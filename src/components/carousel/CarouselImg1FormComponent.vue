@@ -9,6 +9,7 @@
         <template v-else> Select one picture </template>
       </button>
       <button class="btn btn-success my-2">Upload</button>
+      <span v-if="uploadProgress === 1 && files?.length === 1" class="text-success fs-md">Success</span>
     </fieldset>
   </form>
 </template>
