@@ -1,12 +1,12 @@
 <template>
   <section class="container-fluid footer-bg">
-    <div class="row justify-content-end py-2">
+    <div class="row justify-content-end py-4">
       <div class="col-1 d-flex justify-content-end btn-group dropup">
-        <button type="button" class="bg-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="selectable text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
           <span class="material-symbols-outlined fs-sm">
             admin_panel_settings
           </span>
-        </button>
+        </i>
         <ul class="dropdown-menu">
           <li class="d-flex justify-content-center">
             <RouterLink to="/sign-in" class="btn-blank">
@@ -57,5 +57,10 @@ a {
 .admin-login {
   color: blue;
   border-radius: 50%;
+}
+
+li:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
 }
 </style>
