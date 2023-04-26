@@ -12,37 +12,37 @@
     <div class="row justify-content-center">
       <!-- photo row 1 -->
       <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url1" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url1" alt="">
       </div>
       <div class="col-12 col-md-4 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url2" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url2" alt="">
       </div>
       <div class="col-12 col-md-4 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url3" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url3" alt="">
       </div>
     </div>
     <!-- photo row 2 -->
     <div class="row justify-content-center">
       <div class="col-12 col-md-5 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url4" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url4" alt="">
       </div>
       <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url5" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url5" alt="">
       </div>
       <div class="col-12 col-md-3 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url6" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url6" alt="">
       </div>
     </div>
     <!-- photo row 3 -->
     <div class="row justify-content-center">
       <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url7" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url7" alt="">
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url8" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url8" alt="">
       </div>
       <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
-        <img class="featured-img elevation" :src="url9" alt="">
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation" :src="url9" alt="">
       </div>
     </div>
   </section>

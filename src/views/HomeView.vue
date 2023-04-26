@@ -16,8 +16,7 @@
       <div class="col-md-7 d-flex pt-3 px-4">
         <p class="fs-lg">It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that
           subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a
-          weary spirit. I just wish the world was twice as big and half of it was still unexplored. Here are some more
-          words I need to add to make this section longer so I can adjust the style.
+          weary spirit. I just wish the world was twice as big and half of it was still unexplored.
         </p>
       </div>
     </div>
@@ -47,7 +46,7 @@ export default {
 <style scoped>
 .section-divider {
   background-color: gray;
-  width: 100px;
+  width: 200px;
   height: 5px;
 }
 </style>

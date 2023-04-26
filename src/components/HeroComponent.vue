@@ -9,13 +9,13 @@
     <div class="carousel-container">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img :src="url1" class="carousel-img" alt="...">
+          <img oncontextmenu="return false" ondragstart="return false" :src="url1" class="carousel-img" alt="...">
         </div>
         <div class="carousel-item">
-          <img :src="url2" class="carousel-img" alt="...">
+          <img oncontextmenu="return false" ondragstart="return false" :src="url2" class="carousel-img" alt="...">
         </div>
         <div class="carousel-item">
-          <img :src="url3" class="carousel-img" alt="...">
+          <img oncontextmenu="return false" ondragstart="return false" :src="url3" class="carousel-img" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev ml" type="button" data-bs-target="#carouselButton" data-bs-slide="prev">

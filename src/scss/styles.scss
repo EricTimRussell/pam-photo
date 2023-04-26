@@ -1,6 +1,7 @@
 #app {
   background-color: #f2ffff;
   font-family: Tangerine;
+
 }
 
 :root {
@@ -21,7 +22,6 @@
   background-color: var(--secondary-dark);
 }
 
-
 // Utilities
 .elevation {
   box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
@@ -36,11 +36,11 @@
 }
 
 .fs-lg {
-  font-size: 32px;
+  font-size: 42px;
 }
 
 .fs-xl {
-  font-size: 42px;
+  font-size: 48px;
 }
 
 .selectable {
