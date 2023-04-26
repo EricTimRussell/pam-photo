@@ -8,21 +8,17 @@
   <section class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-12 d-flex justify-content-center pt-5">
-        <h2>Welcome Introduction</h2>
+        <h2 class="fs-xl">Welcome Introduction</h2>
       </div>
       <div class="col-12 d-flex justify-content-center">
         <span class="section-divider"></span>
       </div>
       <div class="col-md-7 d-flex pt-3 px-4">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, odit
-          quos
-          ea,
-          temporibus quas obcaecati
-          expedita recusandae perspiciatis dolorem, doloremque vitae sequi. Voluptas quibusdam eveniet odio laudantium
-          nobis in est!
-          Voluptates iure, reprehenderit aspernatur expedita facilis consectetur, commodi molestias facere optio velit
-          tenetur porro sequi ipsam. Error cum rem laborum illum dolore, veniam, delectus iure ea ipsam nesciunt sunt
-          quaerat.</p>
+        <p class="fs-lg">It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that
+          subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a
+          weary spirit. I just wish the world was twice as big and half of it was still unexplored. Here are some more
+          words I need to add to make this section longer so I can adjust the style.
+        </p>
       </div>
     </div>
   </section>

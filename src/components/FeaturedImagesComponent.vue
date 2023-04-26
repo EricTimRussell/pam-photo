@@ -3,7 +3,7 @@
   <section class="container-fluid mb-5">
     <div class="row">
       <div class="col-12 d-flex justify-content-center pt-5">
-        <h2>Featured Photo's</h2>
+        <h2 class="fs-xl">Featured Photo's</h2>
       </div>
       <div class="col-12 d-flex justify-content-center">
         <span class="section-divider"></span>
