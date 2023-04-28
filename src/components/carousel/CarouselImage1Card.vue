@@ -36,6 +36,9 @@ import { useFirebaseStorage, useStorageFile } from "vuefire";
 import { ref as storageRef } from 'firebase/storage'
 
 export default {
+  props: {
+    url1: { type: String }
+  },
   setup() {
     const storage = useFirebaseStorage();
     const carouselImg1 = storageRef(storage, `carouselImg1`);

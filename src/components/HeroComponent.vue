@@ -9,15 +9,15 @@
     <div class="carousel-container">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img oncontextmenu="return false" ondragstart="return false" :src="url1" class="carousel-img"
+          <img oncontextmenu="return false" ondragstart="return false" :src="url1" class="carousel-img selectable"
             data-bs-toggle="modal" data-bs-target="#carousel-Img1-modal" alt="...">
         </div>
         <div class="carousel-item">
-          <img oncontextmenu="return false" ondragstart="return false" :src="url2" class="carousel-img"
+          <img oncontextmenu="return false" ondragstart="return false" :src="url2" class="carousel-img selectable"
             data-bs-toggle="modal" data-bs-target="#carousel-Img2-modal" alt="...">
         </div>
         <div class="carousel-item">
-          <img oncontextmenu="return false" ondragstart="return false" :src="url3" class="carousel-img"
+          <img oncontextmenu="return false" ondragstart="return false" :src="url3" class="carousel-img selectable"
             data-bs-toggle="modal" data-bs-target="#carousel-Img3-modal" alt="...">
         </div>
       </div>
@@ -33,7 +33,7 @@
   </div>
 
 
-
+  <!-- Carousel Modals -->
   <div class="modal fade" id="carousel-Img1-modal" tabindex="-1" aria-labelledby="carousel image" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-center">
       <div class="modal-content">
@@ -41,7 +41,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <ModalImageCard />
+          <CarouselImage1Card :url1="url1" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -58,7 +58,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-
+          <CarouselImage2Card :url2="url2" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -75,7 +75,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-
+          <CarouselImage3Card :url3="url3" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -89,7 +89,9 @@
 <script>
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
-import CarouselImage1Card from "./CarouselImage1Card.vue";
+import CarouselImage1Card from "../components/carousel/CarouselImage1Card.vue";
+import CarouselImage2Card from "./carousel/CarouselImage2Card.vue";
+import CarouselImage3Card from "./carousel/CarouselImage3Card.vue";
 export default {
   props: {
     carousel: { type: Object, required: true }
@@ -108,7 +110,7 @@ export default {
       url3
     };
   },
-  components: { CarouselImage1Card }
+  components: { CarouselImage1Card, CarouselImage2Card, CarouselImage3Card }
 }
 </script>
 
