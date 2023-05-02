@@ -24,8 +24,10 @@
         <span class="material-symbols-outlined">
           explore
         </span>
+        <!-- Link to geo point -->
         <p> 43.4 54.6</p>
-        <!-- Link to google maps location -->
+        <p>Location</p>
+        <p>Date</p>
       </div>
     </div>
   </div>

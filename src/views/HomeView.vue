@@ -14,7 +14,7 @@
         <span class="section-divider"></span>
       </div>
       <div class="col-md-7 d-flex pt-3 px-4">
-        <p class="fs-lg">It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that
+        <p class="fs-md">It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that
           subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a
           weary spirit. I just wish the world was twice as big and half of it was still unexplored.
         </p>

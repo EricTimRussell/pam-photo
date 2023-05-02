@@ -1,10 +1,19 @@
 <template>
   <div class="container-fluid nav-bg-top pt-2">
-    <div class="row">
-      <div class="d-flex justify-content-center col-12 pb-2">
+    <div class="row justify-content-center">
+      <div class="col-3 text-center">
+        <span class="fs-xl">Get</span>
+      </div>
+      <div class="d-flex justify-content-center col-2 pb-2">
         <RouterLink to="/">
-          <h1>Logo</h1>
+          <img class="logo" src="../assets/logo.png" alt="">
         </RouterLink>
+      </div>
+      <div class="col-3 text-center">
+        <span class="fs-xl">Outside</span>
+      </div>
+      <div class="col-12 text-center mb-3">
+        <span class="fs-lg">Photography</span>
       </div>
     </div>
   </div>
@@ -52,5 +61,13 @@ a {
 
 a:hover {
   color: blue;
+}
+
+.logo {
+  background-size: cover;
+  height: auto;
+  width: 13rem;
+  border: 3px solid #cecfc7;
+  border-radius: 25%;
 }
 </style>
