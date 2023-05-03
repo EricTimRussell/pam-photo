@@ -1,7 +1,7 @@
 <template>
   <!-- HERO -->
   <div>
-    <HeroComponent :carousel="carousel" />
+    <HeroComponent :carousel1="carousel1" />
   </div>
 
   <!-- Introduction -->
@@ -33,10 +33,35 @@ import FeaturedImagesComponent from "../components/FeaturedImagesComponent.vue";
 import HeroComponent from "../components/HeroComponent.vue";
 import { appState } from "../stores/AppState"
 import { computed } from "@vue/reactivity"
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
+import { useFirestore } from "vuefire";
+import { onMounted } from "vue";
+
 export default {
   setup() {
+    const db = useFirestore()
+
+    async function getCarouselImage1Docs() {
+      try {
+        const q = query(collection(db, "carousel"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.carousel1 = []
+          querySnapshot.docs.map((doc) => {
+            // console.log(doc.id, " => ", doc.data());
+            appState.carousel1.push({ ...doc.data(), id: doc.id })
+            console.log(appState.carousel1)
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    onMounted(() => {
+      getCarouselImage1Docs()
+    })
     return {
-      carousel: computed(() => appState.carousel),
+      carousel1: computed(() => appState.carousel1),
     };
   },
   components: { HeroComponent, FeaturedImagesComponent }

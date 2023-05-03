@@ -5,28 +5,17 @@
         <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url1" alt="">
       </div>
       <div class="col-4 d-flex flex-column">
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est pariatur quia ad nihil harum
-          sapiente molestias, corporis ipsum distinctio laborum sit fugiat aliquid aut fuga, ipsam deserunt
-          consequatur nulla!
-          Harum, ullam dolorem, adipisci, excepturi fuga suscipit molestiae molestias labore dolorum laboriosam
-          delectus officia in beatae quae deserunt libero maiores cupiditate sunt quidem aut! Aliquid molestiae
-          delectus tempore minima eos!
-          Fugit ipsa nihil esse nesciunt repudiandae, laborum saepe ullam asperiores! Ducimus sequi doloremque
-          beatae ipsa modi enim in possimus aliquid sint iste eius, accusamus sunt dolorum ad sapiente eveniet
-          eaque.
-          Illo ad consequuntur nihil, vero voluptatibus eos in officia iste eaque odio sunt doloribus, blanditiis
-          omnis dolores est, libero quaerat sit? Voluptas aspernatur fugit nisi architecto, veniam cupiditate
-          doloribus odio!
+        <h2>{{ carousel1[0].title }}</h2>
+        <p>{{ carousel1[0].description }}
         </p>
       </div>
-      <div class="col-12 d-flex justify-content-end">
+      <div class="col-12 d-flex justify-content-center mt-3">
         <span class="material-symbols-outlined">
           explore
         </span>
-        <!-- Link to geo point -->
         <p> 43.4 54.6</p>
-        <p>Location</p>
+        <!-- Link to geo point -->
+        <p class="px-5">Location</p>
         <p>Date</p>
       </div>
     </div>
@@ -39,13 +28,13 @@ import { ref as storageRef } from 'firebase/storage'
 
 export default {
   props: {
-    url1: { type: String }
+    url1: { type: String },
+    carousel1: { type: Object, required: true }
   },
   setup() {
     const storage = useFirebaseStorage();
     const carouselImg1 = storageRef(storage, `carouselImg1`);
     const { url: url1 } = useStorageFile(carouselImg1);
-
 
     return {
       url1

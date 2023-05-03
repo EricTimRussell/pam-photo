@@ -9,23 +9,16 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est pariatur quia ad nihil harum
           sapiente molestias, corporis ipsum distinctio laborum sit fugiat aliquid aut fuga, ipsam deserunt
           consequatur nulla!
-          Harum, ullam dolorem, adipisci, excepturi fuga suscipit molestiae molestias labore dolorum laboriosam
-          delectus officia in beatae quae deserunt libero maiores cupiditate sunt quidem aut! Aliquid molestiae
-          delectus tempore minima eos!
-          Fugit ipsa nihil esse nesciunt repudiandae, laborum saepe ullam asperiores! Ducimus sequi doloremque
-          beatae ipsa modi enim in possimus aliquid sint iste eius, accusamus sunt dolorum ad sapiente eveniet
-          eaque.
-          Illo ad consequuntur nihil, vero voluptatibus eos in officia iste eaque odio sunt doloribus, blanditiis
-          omnis dolores est, libero quaerat sit? Voluptas aspernatur fugit nisi architecto, veniam cupiditate
-          doloribus odio!
         </p>
       </div>
-      <div class="col-12 d-flex justify-content-end">
+      <div class="col-12 d-flex justify-content-center mt-3">
         <span class="material-symbols-outlined">
           explore
         </span>
         <p> 43.4 54.6</p>
-        <!-- Link to google maps location -->
+        <!-- Link to geo point -->
+        <p class="px-5">Location</p>
+        <p>Date</p>
       </div>
     </div>
   </div>
