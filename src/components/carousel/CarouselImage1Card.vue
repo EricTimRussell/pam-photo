@@ -28,7 +28,7 @@ import { ref as storageRef } from 'firebase/storage'
 
 export default {
   props: {
-    url1: { type: String },
+    url1: { type: String, required: false },
     carousel: { type: Object, required: true }
   },
   setup() {

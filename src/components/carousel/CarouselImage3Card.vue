@@ -2,23 +2,21 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-8">
-        <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url3" alt="">
+        <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url1" alt="">
       </div>
       <div class="col-4 d-flex flex-column">
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est pariatur quia ad nihil harum
-          sapiente molestias, corporis ipsum distinctio laborum sit fugiat aliquid aut fuga, ipsam deserunt
-          consequatur nulla!
+        <h2>{{ carousel[2]?.title }}</h2>
+        <p>{{ carousel[2]?.description }}
         </p>
       </div>
       <div class="col-12 d-flex justify-content-center mt-3">
         <span class="material-symbols-outlined">
           explore
         </span>
-        <p> 43.4 54.6</p>
+        <p> {{ carousel[2]?.gps }}</p>
         <!-- Link to geo point -->
-        <p class="px-5">Location</p>
-        <p>Date</p>
+        <p class="px-5">{{ carousel[2]?.location }}</p>
+        <p>{{ carousel[2]?.date }}</p>
       </div>
     </div>
   </div>
@@ -30,7 +28,8 @@ import { ref as storageRef } from 'firebase/storage'
 
 export default {
   props: {
-    url3: { type: String }
+    url3: { type: String, required: false },
+    carousel: { type: Object, required: true }
   },
   setup() {
     const storage = useFirebaseStorage();
