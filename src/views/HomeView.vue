@@ -1,7 +1,7 @@
 <template>
   <!-- HERO -->
   <div>
-    <HeroComponent :carousel1="carousel1" />
+    <HeroComponent :carousel="carousel" />
   </div>
 
   <!-- Introduction -->
@@ -46,11 +46,11 @@ export default {
         const q = query(collection(db, "carousel"));
         const querySnapshot = await getDocs(q);
         onSnapshot(q, (querySnapshot) => {
-          appState.carousel1 = []
+          appState.carousel = []
           querySnapshot.docs.map((doc) => {
             // console.log(doc.id, " => ", doc.data());
-            appState.carousel1.push({ ...doc.data(), id: doc.id })
-            console.log(appState.carousel1)
+            appState.carousel.push({ ...doc.data(), id: doc.id })
+            console.log(appState.carousel)
           });
         })
       } catch (error) {
@@ -61,7 +61,7 @@ export default {
       getCarouselImage1Docs()
     })
     return {
-      carousel1: computed(() => appState.carousel1),
+      carousel: computed(() => appState.carousel),
     };
   },
   components: { HeroComponent, FeaturedImagesComponent }

@@ -41,7 +41,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImage1Card :url1="url1" :carousel1="carousel1" />
+          <CarouselImage1Card :url1="url1" :carousel="carousel" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -94,7 +94,7 @@ import CarouselImage2Card from "./carousel/CarouselImage2Card.vue";
 import CarouselImage3Card from "./carousel/CarouselImage3Card.vue";
 export default {
   props: {
-    carousel1: { type: Object, required: true }
+    carousel: { type: Object, required: true }
   },
   setup() {
     const storage = useFirebaseStorage();
