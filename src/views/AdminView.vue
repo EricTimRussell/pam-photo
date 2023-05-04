@@ -12,7 +12,7 @@
           Edit Details
         </button>
         <ModalComponent id="carousel1">
-          <CarouselDetailsForm />
+          <CarouselImage1DetailsForm :carousel="carousel" />
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import { useCurrentUser } from "vuefire";
+import { useCurrentUser, useFirestore } from "vuefire";
 import CarouselImg1FormComponent from "../components/carousel/CarouselImg1FormComponent.vue";
 import CarouselImg2FormComponent from "../components/carousel/CarouselImg2FormComponent.vue";
 import CarouselImg3FormComponent from "../components/carousel/CarouselImg3FormComponent.vue";
@@ -109,15 +109,43 @@ import FeaturedImage6FormComponent from "../components/featuredImages/FeaturedIm
 import FeaturedImage7FormComponent from "../components/featuredImages/FeaturedImage7FormComponent.vue";
 import FeaturedImage8FormComponent from "../components/featuredImages/FeaturedImage8FormComponent.vue";
 import FeaturedImage9FormComponent from "../components/featuredImages/FeaturedImage9FormComponent.vue";
-import CarouselDetailsForm from "../components/carousel/CarouselDetailsForm.vue";
+import CarouselImage1DetailsForm from "../components/carousel/CarouselImgae1DetailsForm.vue";
 import ModalComponent from "../components/ModalComponent.vue";
-
+import { appState } from "../stores/AppState"
+import { computed } from "@vue/reactivity"
+import { onMounted } from "vue";
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
 export default {
   setup() {
     const user = useCurrentUser()
-    return { user };
+    const db = useFirestore()
+
+    async function getCarouselImagesDetails() {
+      try {
+        const q = query(collection(db, "carousel"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.carousel = []
+          querySnapshot.docs.map((doc) => {
+            // console.log(doc.id, " => ", doc.data());
+            appState.carousel.push({ ...doc.data(), id: doc.id })
+            // console.log(appState.carousel)
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    onMounted(() => {
+      getCarouselImagesDetails()
+    })
+    return {
+      user,
+      carousel: computed(() => appState.carousel),
+
+    };
   },
-  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselDetailsForm }
+  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm }
 }
 </script>
 

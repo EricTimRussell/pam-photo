@@ -41,7 +41,7 @@ export default {
   setup() {
     const db = useFirestore()
 
-    async function getCarouselImage1Docs() {
+    async function getCarouselImagesDetails() {
       try {
         const q = query(collection(db, "carousel"));
         const querySnapshot = await getDocs(q);
@@ -50,7 +50,7 @@ export default {
           querySnapshot.docs.map((doc) => {
             // console.log(doc.id, " => ", doc.data());
             appState.carousel.push({ ...doc.data(), id: doc.id })
-            console.log(appState.carousel)
+            // console.log(appState.carousel)
           });
         })
       } catch (error) {
@@ -58,7 +58,7 @@ export default {
       }
     }
     onMounted(() => {
-      getCarouselImage1Docs()
+      getCarouselImagesDetails()
     })
     return {
       carousel: computed(() => appState.carousel),
