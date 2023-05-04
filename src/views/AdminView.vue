@@ -8,14 +8,32 @@
       <div class="col-4 d-flex flex-column align-items-center mt-3">
         <h3>Image 1</h3>
         <CarouselImg1FormComponent />
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carousel1">
+          Edit Details
+        </button>
+        <ModalComponent id="carousel1">
+          <CarouselDetailsForm />
+        </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
         <h3>Image 2</h3>
         <CarouselImg2FormComponent />
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carousel2">
+          Edit Details
+        </button>
+        <ModalComponent id="carousel2">
+          carousel2
+        </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
         <h3>Image 3</h3>
         <CarouselImg3FormComponent />
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carousel3">
+          Edit Details
+        </button>
+        <ModalComponent id="carousel3">
+          carousel3
+        </ModalComponent>
       </div>
     </div>
     <div class="row">
@@ -91,13 +109,15 @@ import FeaturedImage6FormComponent from "../components/featuredImages/FeaturedIm
 import FeaturedImage7FormComponent from "../components/featuredImages/FeaturedImage7FormComponent.vue";
 import FeaturedImage8FormComponent from "../components/featuredImages/FeaturedImage8FormComponent.vue";
 import FeaturedImage9FormComponent from "../components/featuredImages/FeaturedImage9FormComponent.vue";
+import CarouselDetailsForm from "../components/carousel/CarouselDetailsForm.vue";
+import ModalComponent from "../components/ModalComponent.vue";
 
 export default {
   setup() {
     const user = useCurrentUser()
     return { user };
   },
-  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent }
+  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselDetailsForm }
 }
 </script>
 
