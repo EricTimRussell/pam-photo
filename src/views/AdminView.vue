@@ -128,6 +128,7 @@ export default {
           appState.carousel = []
           querySnapshot.docs.map((doc) => {
             // console.log(doc.id, " => ", doc.data());
+            // @ts-ignore
             appState.carousel.push({ ...doc.data(), id: doc.id })
             // console.log(appState.carousel)
           });

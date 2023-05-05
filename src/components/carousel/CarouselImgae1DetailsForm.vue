@@ -1,21 +1,21 @@
 <template>
   <form @submit.prevent="editCarouselDetails()">
     <div class="form-floating mb-3">
-      <input required type="text" v-model="editable.title" class="form-control" id="title" placeholder="Image Title">
+      <input type="text" v-model="editable.title" class="form-control" id="title" placeholder="Image Title" required>
       <label for="title">Title</label>
     </div>
     <div class="form-floating mb-3">
-      <textarea required v-model="editable.description" class="form-control" id="description" aria-label="textarea">
+      <textarea v-model="editable.description" class="form-control" id="description" aria-label="textarea" required>
       </textarea>
       <label for="description">Description</label>
     </div>
     <div class="form-floating mb-3">
-      <input required type="text" v-model="editable.location" class="form-control" id="location"
-        placeholder="Photo Location">
+      <input type="text" v-model="editable.location" class="form-control" id="location" placeholder="Photo Location"
+        required>
       <label for="location">Loaction</label>
     </div>
     <div class="form-floating mb-3">
-      <input required type="text" v-model="editable.date" class="form-control" id="date" placeholder="Photo date">
+      <input type="text" v-model="editable.date" class="form-control" id="date" placeholder="Photo date" required>
       <label for="date">Date Taken</label>
     </div>
     <div class="modal-footer">
@@ -26,8 +26,8 @@
 </template>
 <script>
 import { doc } from "firebase/firestore";
-import { ref } from "vue";
-import { useFirestore } from "vuefire";
+import { ref, watch } from "vue";
+import { useDocument, useFirestore } from "vuefire";
 import { carouselDetailsService } from "../../services/CarouselDetailsService";
 export default {
   props: {
@@ -36,7 +36,16 @@ export default {
   setup(props) {
     const db = useFirestore()
     const carousel1 = doc(db, "carousel", "carousel1");
+    const carousel1Source = useDocument(carousel1)
+
     const editable = ref({ title: props.carousel[0]?.title, description: props.carousel[0]?.description, location: props.carousel[0]?.location, date: props.carousel[0]?.date })
+
+    watch(carousel1Source, (carousel1Source) => {
+      // @ts-ignore
+      editable.value = {
+        ...carousel1Source,
+      }
+    })
     return {
       editable,
       carousel1,
