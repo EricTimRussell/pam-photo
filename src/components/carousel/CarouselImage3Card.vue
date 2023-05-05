@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-8">
-        <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url1" alt="">
+        <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url3" alt="">
       </div>
       <div class="col-4 d-flex flex-column">
         <h2>{{ carousel[2]?.title }}</h2>

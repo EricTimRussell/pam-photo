@@ -22,7 +22,7 @@
           Edit Details
         </button>
         <ModalComponent id="carousel2">
-          carousel2
+          <CarouselImage2DetailsForm :carousel="carousel" />
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
@@ -32,7 +32,7 @@
           Edit Details
         </button>
         <ModalComponent id="carousel3">
-          carousel3
+          <CarouselImage3DetailsForm :carousel="carousel" />
         </ModalComponent>
       </div>
     </div>
@@ -115,6 +115,8 @@ import { appState } from "../stores/AppState"
 import { computed } from "@vue/reactivity"
 import { onMounted } from "vue";
 import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
+import CarouselImage2DetailsForm from "../components/carousel/CarouselImage2DetailsForm.vue";
+import CarouselImage3DetailsForm from "../components/carousel/CarouselImage3DetailsForm.vue";
 export default {
   setup() {
     const user = useCurrentUser()
@@ -146,7 +148,7 @@ export default {
 
     };
   },
-  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm }
+  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm }
 }
 </script>
 

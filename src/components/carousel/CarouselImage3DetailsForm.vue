@@ -35,23 +35,23 @@ export default {
   },
   setup(props) {
     const db = useFirestore()
-    const carousel1 = doc(db, "carousel", "carousel1");
-    const carousel1Source = useDocument(carousel1)
+    const carousel3 = doc(db, "carousel", "carousel3");
+    const carousel3Source = useDocument(carousel3)
 
     const editable = ref({})
 
-    watch(carousel1Source, (carousel1Source) => {
+    watch(carousel3Source, (carousel3Source) => {
       // @ts-ignore
       editable.value = {
-        ...carousel1Source,
+        ...carousel3Source,
       }
     })
     return {
       editable,
-      carousel1,
+      carousel3,
       async editCarouselDetails() {
         try {
-          await carouselDetailsService.editCarouselImage1Details(editable, carousel1)
+          await carouselDetailsService.editCarouselImage3Details(editable, carousel3)
         } catch (error) {
           console.error(error);
         }

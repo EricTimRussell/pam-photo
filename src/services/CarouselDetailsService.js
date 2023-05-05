@@ -11,9 +11,24 @@ class CarouselDetailsService {
       location: editable.value.location,
       date: editable.value.date
     });
-    console.log('Success?');
-    // editable.value = ({ title: '', description: '', gps: {} })
   }
 
+  async editCarouselImage2Details(editable, carousel2) {
+    await updateDoc(carousel2, {
+      title: editable.value.title,
+      description: editable.value.description,
+      location: editable.value.location,
+      date: editable.value.date
+    });
+  }
+
+  async editCarouselImage3Details(editable, carousel3) {
+    await updateDoc(carousel3, {
+      title: editable.value.title,
+      description: editable.value.description,
+      location: editable.value.location,
+      date: editable.value.date
+    });
+  }
 }
 export const carouselDetailsService = new CarouselDetailsService()
