@@ -1,7 +1,5 @@
 import { updateDoc } from "firebase/firestore";
-import { useFirestore } from "vuefire";
 
-const db = useFirestore()
 class CarouselDetailsService {
 
   async editCarouselImage1Details(editable, carousel1) {

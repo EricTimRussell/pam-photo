@@ -43,6 +43,12 @@
       <div class="col-4 d-flex flex-column align-items-center mt-3">
         <h3>Image 1</h3>
         <FeaturedImage1FormComponent />
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured1">
+          Edit Details
+        </button>
+        <ModalComponent id="featured1">
+          <FeaturedImage1DetailsForm :featured="featured" />
+        </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
         <h3>Image 2</h3>
@@ -117,6 +123,7 @@ import { onMounted } from "vue";
 import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
 import CarouselImage2DetailsForm from "../components/carousel/CarouselImage2DetailsForm.vue";
 import CarouselImage3DetailsForm from "../components/carousel/CarouselImage3DetailsForm.vue";
+import FeaturedImage1DetailsForm from "../components/featuredImages/FeaturedImage1DetailsForm.vue";
 export default {
   setup() {
     const user = useCurrentUser()
@@ -139,16 +146,34 @@ export default {
         console.error(error)
       }
     }
+    async function getFeaturedImagesDetails() {
+      try {
+        const q = query(collection(db, "featuredImages"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.featuredImages = []
+          querySnapshot.docs.map((doc) => {
+            // console.log(doc.id, " => ", doc.data());
+            // @ts-ignore
+            appState.featuredImages.push({ ...doc.data(), id: doc.id })
+            // console.log(appState.carousel)
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
     onMounted(() => {
       getCarouselImagesDetails()
+      getFeaturedImagesDetails()
     })
     return {
       user,
       carousel: computed(() => appState.carousel),
-
+      featured: computed(() => appState.featuredImages)
     };
   },
-  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm }
+  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm, FeaturedImage1DetailsForm }
 }
 </script>
 

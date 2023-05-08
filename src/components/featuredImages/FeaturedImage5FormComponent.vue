@@ -1,4 +1,5 @@
 <template>
+  <img v-if="url" class="img-preview" :src="url" alt="">
   <form class="d-flex justify-content-center" @submit.prevent="uploadPicture">
     <!-- disable the form while uploading -->
     <fieldset class="d-flex flex-column align-items-center" :disabled="!!uploadTask">
@@ -24,6 +25,7 @@ const storage = useFirebaseStorage()
 const featuredImg5 = storageRef(storage, `featuredImg5`)
 
 const {
+  url,
   uploadProgress,
   uploadTask,
   upload,
