@@ -13,12 +13,7 @@
       <div class="col-12 d-flex justify-content-center">
         <span class="section-divider"></span>
       </div>
-      <div class="col-md-7 d-flex pt-3 px-4">
-        <p class="fs-md">It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that
-          subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a
-          weary spirit. I just wish the world was twice as big and half of it was still unexplored.
-        </p>
-      </div>
+      <SummaryCardComponent :summary="summary[0]" />
     </div>
   </section>
 
@@ -31,6 +26,7 @@
 <script>
 import FeaturedImagesComponent from "../components/FeaturedImagesComponent.vue";
 import HeroComponent from "../components/HeroComponent.vue";
+import SummaryCardComponent from "../components/SummaryCardComponent.vue";
 import { appState } from "../stores/AppState"
 import { computed } from "@vue/reactivity"
 import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
@@ -76,16 +72,34 @@ export default {
       }
     }
 
+    async function getSummary() {
+      try {
+        const q = query(collection(db, "summarySection"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.summary = []
+          querySnapshot.docs.map((doc) => {
+            // @ts-ignore
+            appState.summary.push({ ...doc.data(), id: doc.id })
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
     onMounted(() => {
       getCarouselImagesDetails()
       getFeaturedImagesDetails()
+      getSummary()
     })
     return {
       carousel: computed(() => appState.carousel),
-      featured: computed(() => appState.featuredImages)
+      featured: computed(() => appState.featuredImages),
+      summary: computed(() => appState.summary)
     };
   },
-  components: { HeroComponent, FeaturedImagesComponent }
+  components: { HeroComponent, FeaturedImagesComponent, SummaryCardComponent }
 }
 </script>
 

@@ -6,7 +6,7 @@
       </div>
       <div class="d-flex justify-content-center col-2 pb-2">
         <RouterLink to="/">
-          <img class="logo" src="../assets/logo.png" alt="">
+          <img class="logo" oncontextmenu="return false" ondragstart="return false" src="../assets/logo.png" alt="">
         </RouterLink>
       </div>
       <div class="col-3 text-center">

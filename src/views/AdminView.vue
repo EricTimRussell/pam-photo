@@ -36,6 +36,19 @@
         </ModalComponent>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <h2>Edit Summary</h2>
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#summary">
+          Edit Details
+        </button>
+        <ModalComponent id="summary">
+          <SummaryForm :summary="summary[0]" />
+        </ModalComponent>
+      </div>
+    </div>
     <div class="row pb-3">
       <div class="col-12 text-center mt-5">
         <h2>Featured Images Row 1</h2>
@@ -180,6 +193,7 @@ import FeaturedImage6DetailsForm from "../components/featuredImages/FeaturedImag
 import FeaturedImage7DetailsForm from "../components/featuredImages/FeaturedImage7DetailsForm.vue";
 import FeaturedImage8DetailsForm from "../components/featuredImages/FeaturedImage8DetailsForm.vue";
 import FeaturedImage9DetailsForm from "../components/featuredImages/FeaturedImage9DetailsForm.vue";
+import SummaryForm from "../components/SummaryForm.vue";
 export default {
   setup() {
     const user = useCurrentUser()
@@ -202,6 +216,7 @@ export default {
         console.error(error)
       }
     }
+
     async function getFeaturedImagesDetails() {
       try {
         const q = query(collection(db, "featuredImages"));
@@ -219,17 +234,36 @@ export default {
         console.error(error)
       }
     }
+
+    async function getSummary() {
+      try {
+        const q = query(collection(db, "summarySection"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.summary = []
+          querySnapshot.docs.map((doc) => {
+            // @ts-ignore
+            appState.summary.push({ ...doc.data(), id: doc.id })
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
     onMounted(() => {
       getCarouselImagesDetails()
       getFeaturedImagesDetails()
+      getSummary()
     })
     return {
       user,
       carousel: computed(() => appState.carousel),
-      featured: computed(() => appState.featuredImages)
+      featured: computed(() => appState.featuredImages),
+      summary: computed(() => appState.summary)
     };
   },
-  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm, FeaturedImage1DetailsForm, FeaturedImage2DetailsForm, FeaturedImage3DetailsForm, FeaturedImage4DetailsForm, FeaturedImage5DetailsForm, FeaturedImage6DetailsForm, FeaturedImage7DetailsForm, FeaturedImage8DetailsForm, FeaturedImage9DetailsForm }
+  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm, FeaturedImage1DetailsForm, FeaturedImage2DetailsForm, FeaturedImage3DetailsForm, FeaturedImage4DetailsForm, FeaturedImage5DetailsForm, FeaturedImage6DetailsForm, FeaturedImage7DetailsForm, FeaturedImage8DetailsForm, FeaturedImage9DetailsForm, SummaryForm }
 }
 </script>
 
