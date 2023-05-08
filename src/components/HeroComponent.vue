@@ -41,7 +41,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImage1Card :url1="url1" :carousel="carousel[0]" />
+          <CarouselImageCard :url1="url1" :carousel="carousel[0]" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -57,7 +57,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImage1Card :url2="url2" :carousel="carousel[1]" />
+          <CarouselImageCard :url2="url2" :carousel="carousel[1]" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -73,7 +73,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImage1Card :url3="url3" :carousel="carousel[2]" />
+          <CarouselImageCard :url3="url3" :carousel="carousel[2]" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -86,9 +86,7 @@
 <script>
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
-import CarouselImage1Card from "../components/carousel/CarouselImage1Card.vue";
-import CarouselImage2Card from "./carousel/CarouselImage2Card.vue";
-import CarouselImage3Card from "./carousel/CarouselImage3Card.vue";
+import CarouselImageCard from "../components/carousel/CarouselImageCard.vue";
 export default {
   props: {
     carousel: { type: Object, required: true }
@@ -107,7 +105,7 @@ export default {
       url3
     };
   },
-  components: { CarouselImage1Card, CarouselImage2Card, CarouselImage3Card }
+  components: { CarouselImageCard }
 }
 </script>
 
