@@ -1,6 +1,6 @@
 <template>
   <div v-if="user" class="container-fluid">
-    <div class="row">
+    <div class="row bg-secondary pb-3">
       <h1 class="text-center mt-5">Admin Page</h1>
       <div class="col-12 text-center mt-3">
         <h2>Carousel Images</h2>
@@ -36,7 +36,7 @@
         </ModalComponent>
       </div>
     </div>
-    <div class="row">
+    <div class="row pb-3">
       <div class="col-12 text-center mt-5">
         <h2>Featured Images Row 1</h2>
       </div>
@@ -71,7 +71,7 @@
         </ModalComponent>
       </div>
     </div>
-    <div class="row">
+    <div class="row bg-secondary py-3">
       <div class="col-12 text-center mt-5">
         <h2>Featured Images Row 2</h2>
       </div>

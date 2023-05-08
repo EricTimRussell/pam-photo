@@ -24,7 +24,7 @@
 
   <!-- Featured Images -->
   <div>
-    <FeaturedImagesComponent />
+    <FeaturedImagesComponent :featured="featured" />
   </div>
 </template>
 
@@ -57,11 +57,32 @@ export default {
         console.error(error)
       }
     }
+
+    async function getFeaturedImagesDetails() {
+      try {
+        const q = query(collection(db, "featuredImages"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.featuredImages = []
+          querySnapshot.docs.map((doc) => {
+            // console.log(doc.id, " => ", doc.data());
+            // @ts-ignore
+            appState.featuredImages.push({ ...doc.data(), id: doc.id })
+            // console.log(appState.carousel)
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
     onMounted(() => {
       getCarouselImagesDetails()
+      getFeaturedImagesDetails()
     })
     return {
       carousel: computed(() => appState.carousel),
+      featured: computed(() => appState.featuredImages)
     };
   },
   components: { HeroComponent, FeaturedImagesComponent }

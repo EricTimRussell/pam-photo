@@ -13,10 +13,8 @@
         <span class="material-symbols-outlined">
           explore
         </span>
-        <p> {{ carousel[1]?.gps }}</p>
-        <!-- Link to geo point -->
-        <p class="px-5">{{ carousel[1]?.location }}</p>
-        <p>{{ carousel[1]?.date }}</p>
+        <p>{{ carousel[1]?.location }}</p>
+        <p class="px-5">{{ carousel[1]?.date }}</p>
       </div>
     </div>
   </div>

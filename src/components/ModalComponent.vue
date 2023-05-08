@@ -6,7 +6,7 @@
 
   <!-- Modal -->
   <div class="modal fade" id="image-details" tabindex="-1" aria-labelledby="image-detailsLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-xl modal-dialog-center">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="image-detailsLabel">Image Details</h1>
@@ -17,10 +17,6 @@
 
           </slot>
         </div>
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div> -->
       </div>
     </div>
   </div>
