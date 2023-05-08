@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="editFeaturedImage1Details()">
+  <form @submit.prevent="editFeaturedImage5Details()">
     <div class="form-floating mb-3">
       <input type="text" v-model="editable.title" class="form-control" id="title" placeholder="Image Title" required>
       <label for="title">Title</label>
@@ -35,23 +35,23 @@ export default {
   },
   setup(props) {
     const db = useFirestore()
-    const featured1 = doc(db, "featuredImages", "featured1");
-    const featured1Source = useDocument(featured1)
+    const featured5 = doc(db, "featuredImages", "featured5");
+    const featured5Source = useDocument(featured5)
 
     const editable = ref({})
 
-    watch(featured1Source, (featured1Source) => {
+    watch(featured5Source, (featured5Source) => {
       // @ts-ignore
       editable.value = {
-        ...featured1Source,
+        ...featured5Source,
       }
     })
     return {
       editable,
-      featured1,
-      async editFeaturedImage1Details() {
+      featured5,
+      async editFeaturedImage5Details() {
         try {
-          await featuredPhotosService.editFeaturedImage1Details(editable, featured1)
+          await featuredPhotosService.editFeaturedImage5Details(editable, featured5)
         } catch (error) {
           console.error(error);
         }
