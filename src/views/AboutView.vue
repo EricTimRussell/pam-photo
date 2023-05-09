@@ -9,20 +9,11 @@
         <div class="col-12 d-flex justify-content-center">
           <span class="section-divider"></span>
         </div>
-        <!-- TODO add image of her if mom wants it -->
         <div class="col-sm-12 col-md-4">
-          <img class="personal-img" src="../assets/placeholder.jpg" alt="">
+          <img class="personal-img" :src="personalImg || undefined" alt="">
         </div>
         <div class="col-sm-12 col-md-7 d-flex pt-3 px-4">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, odit
-            quos
-            ea,
-            temporibus quas obcaecati
-            expedita recusandae perspiciatis dolorem, doloremque vitae sequi. Voluptas quibusdam eveniet odio laudantium
-            nobis in est!
-            Voluptates iure, reprehenderit aspernatur expedita facilis consectetur, commodi molestias facere optio velit
-            tenetur porro sequi ipsam. Error cum rem laborum illum dolore, veniam, delectus iure ea ipsam nesciunt sunt
-            quaerat.</p>
+          <p>{{ about?.about }}</p>
         </div>
       </div>
     </section>
@@ -30,11 +21,43 @@
 </template>
 
 <script>
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
+import { useFirebaseStorage, useFirestore, useStorageFile } from "vuefire";
+import { ref as storageRef } from 'firebase/storage'
+import { appState } from "../stores/AppState";
+import { computed } from "@vue/reactivity"
+import { onMounted } from "vue";
 export default {
   setup() {
+    const db = useFirestore()
+    const storage = useFirebaseStorage();
+    const aboutImg = storageRef(storage, 'aboutImg');
+    const { url: personalImg } = useStorageFile(aboutImg);
 
 
-    return {}
+    async function getAbout() {
+      try {
+        const q = query(collection(db, "aboutSection"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.about = []
+          querySnapshot.docs.map((doc) => {
+            appState.about.push({ ...doc.data(), id: doc.id })
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    onMounted(() => {
+      getAbout()
+    })
+
+    return {
+      personalImg,
+      about: computed(() => appState.about[0])
+    }
   }
 }
 </script>
@@ -44,7 +67,7 @@ export default {
   object-fit: cover;
   display: block;
   width: 100%;
-  height: 35vh;
+  height: 70vh;
 }
 
 .height {

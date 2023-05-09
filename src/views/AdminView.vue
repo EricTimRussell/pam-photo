@@ -1,7 +1,7 @@
 <template>
   <div v-if="user" class="container-fluid">
-    <div class="row bg-secondary pb-3">
-      <h1 class="text-center mt-5">Admin Page</h1>
+    <!-- SECTION Carousel Images -->
+    <div class="row pb-3">
       <div class="col-12 text-center mt-3">
         <h2>Carousel Images</h2>
       </div>
@@ -36,7 +36,8 @@
         </ModalComponent>
       </div>
     </div>
-    <div class="row">
+    <!-- SECTION Summary Section -->
+    <div class="row bg-secondary pt-2">
       <div class="col-12 d-flex justify-content-center">
         <h2>Edit Summary</h2>
       </div>
@@ -49,7 +50,8 @@
         </ModalComponent>
       </div>
     </div>
-    <div class="row pb-3">
+    <!-- SECTION Featured Images Row 1 -->
+    <div class="row pb-3 bg-secondary">
       <div class="col-12 text-center mt-5">
         <h2>Featured Images Row 1</h2>
       </div>
@@ -84,7 +86,8 @@
         </ModalComponent>
       </div>
     </div>
-    <div class="row bg-secondary py-3">
+    <!-- SECTION Featured Images Row 2 -->
+    <div class="row py-3">
       <div class="col-12 text-center mt-5">
         <h2>Featured Images Row 2</h2>
       </div>
@@ -119,7 +122,8 @@
         </ModalComponent>
       </div>
     </div>
-    <div class="row mb-5">
+    <!-- SECTION Featured Images Row 3 -->
+    <div class="row bg-secondary pb-3">
       <div class="col-12 text-center mt-5">
         <h2>Featured Images Row 3</h2>
       </div>
@@ -154,6 +158,19 @@
         </ModalComponent>
       </div>
     </div>
+    <!-- SECTION About Page Section -->
+    <div class="row pb-3 mt-5">
+      <div class="col-12 d-flex flex-column align-items-center">
+        <h2>Edit About</h2>
+        <AboutImageFormComponent />
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#about">
+          Edit About
+        </button>
+        <ModalComponent id="about">
+          <AboutFormComponent :about="about" />
+        </ModalComponent>
+      </div>
+    </div>
   </div>
   <div v-else>
     <span class="fs-xl d-flex justify-content-center">
@@ -164,6 +181,12 @@
 
 <script>
 import { useCurrentUser, useFirestore } from "vuefire";
+import { appState } from "../stores/AppState"
+import { computed } from "@vue/reactivity"
+import { onMounted } from "vue";
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
+
+// Components
 import CarouselImg1FormComponent from "../components/carousel/CarouselImg1FormComponent.vue";
 import CarouselImg2FormComponent from "../components/carousel/CarouselImg2FormComponent.vue";
 import CarouselImg3FormComponent from "../components/carousel/CarouselImg3FormComponent.vue";
@@ -178,10 +201,6 @@ import FeaturedImage8FormComponent from "../components/featuredImages/FeaturedIm
 import FeaturedImage9FormComponent from "../components/featuredImages/FeaturedImage9FormComponent.vue";
 import CarouselImage1DetailsForm from "../components/carousel/CarouselImgae1DetailsForm.vue";
 import ModalComponent from "../components/ModalComponent.vue";
-import { appState } from "../stores/AppState"
-import { computed } from "@vue/reactivity"
-import { onMounted } from "vue";
-import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
 import CarouselImage2DetailsForm from "../components/carousel/CarouselImage2DetailsForm.vue";
 import CarouselImage3DetailsForm from "../components/carousel/CarouselImage3DetailsForm.vue";
 import FeaturedImage1DetailsForm from "../components/featuredImages/FeaturedImage1DetailsForm.vue";
@@ -194,6 +213,8 @@ import FeaturedImage7DetailsForm from "../components/featuredImages/FeaturedImag
 import FeaturedImage8DetailsForm from "../components/featuredImages/FeaturedImage8DetailsForm.vue";
 import FeaturedImage9DetailsForm from "../components/featuredImages/FeaturedImage9DetailsForm.vue";
 import SummaryForm from "../components/SummaryForm.vue";
+import AboutFormComponent from "../components/AboutFormComponent.vue";
+import AboutImageFormComponent from "../components/AboutImageFormComponent.vue";
 export default {
   setup() {
     const user = useCurrentUser()
@@ -251,19 +272,37 @@ export default {
       }
     }
 
+    async function getAbout() {
+      try {
+        const q = query(collection(db, "aboutSection"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.about = []
+          querySnapshot.docs.map((doc) => {
+            // @ts-ignore
+            appState.about.push({ ...doc.data(), id: doc.id })
+          });
+        })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
     onMounted(() => {
       getCarouselImagesDetails()
       getFeaturedImagesDetails()
       getSummary()
+      getAbout()
     })
     return {
       user,
       carousel: computed(() => appState.carousel),
       featured: computed(() => appState.featuredImages),
-      summary: computed(() => appState.summary)
+      summary: computed(() => appState.summary),
+      about: computed(() => appState.about)
     };
   },
-  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm, FeaturedImage1DetailsForm, FeaturedImage2DetailsForm, FeaturedImage3DetailsForm, FeaturedImage4DetailsForm, FeaturedImage5DetailsForm, FeaturedImage6DetailsForm, FeaturedImage7DetailsForm, FeaturedImage8DetailsForm, FeaturedImage9DetailsForm, SummaryForm }
+  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm, FeaturedImage1DetailsForm, FeaturedImage2DetailsForm, FeaturedImage3DetailsForm, FeaturedImage4DetailsForm, FeaturedImage5DetailsForm, FeaturedImage6DetailsForm, FeaturedImage7DetailsForm, FeaturedImage8DetailsForm, FeaturedImage9DetailsForm, SummaryForm, AboutFormComponent, AboutImageFormComponent }
 }
 </script>
 

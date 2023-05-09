@@ -30,7 +30,7 @@
           <span class="links fs-md">Contact</span>
         </RouterLink>
         <RouterLink to="/galleries">
-          <span class="links fs-md">Gallery</span>
+          <span class="links fs-md">Galleries</span>
         </RouterLink>
       </div>
     </nav>
