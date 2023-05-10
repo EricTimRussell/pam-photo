@@ -131,11 +131,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.featured-img {
-  object-fit: cover;
-  display: block;
-  width: 100%;
-  height: 35vh;
-}
-</style>
+<style lang="scss" scoped></style>

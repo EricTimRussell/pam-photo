@@ -29,6 +29,13 @@
   height: auto;
 }
 
+.featured-img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 35vh;
+}
+
 // Utilities
 .elevation {
   box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
@@ -91,9 +98,19 @@
   .no-mobile {
     display: none;
   }
+
+  .featured-img {
+    box-shadow: none;
+  }
 }
 
 // Mobile
+@media (max-width: 767px) {
+  .featured-img {
+    padding: .5rem;
+  }
+}
+
 @media (max-width: 576px) {
   .fs-sm {
     font-size: 16px;
@@ -113,5 +130,9 @@
 
   .no-mobile {
     display: none;
+  }
+
+  .featured-img {
+    padding: .5rem;
   }
 }
