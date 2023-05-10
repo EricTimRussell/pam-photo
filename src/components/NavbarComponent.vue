@@ -2,7 +2,7 @@
   <div class="container-fluid nav-bg-top pt-2">
     <div class="row justify-content-center">
       <div class="col-4 text-end">
-        <span class="fs-lg">Get</span>
+        <span class="fs-lg no-mobile">Get</span>
       </div>
       <div class="d-flex justify-content-center col-3 pb-2">
         <RouterLink to="/">
@@ -10,27 +10,54 @@
         </RouterLink>
       </div>
       <div class="col-4 text-start">
-        <span class="fs-lg">Outside</span>
+        <span class="fs-lg no-mobile">Outside</span>
+      </div>
+      <!-- Mobile only nav -->
+      <div id="nav" class="col-12 d-flex justify-content-center">
+        <div class="dropdown-center mobile-only">
+          <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="fs-xl material-symbols-outlined">
+              menu
+            </span>
+          </button>
+          <nav class="dropdown-menu">
+            <div class="d-flex flex-column align-items-center">
+              <RouterLink to="/">
+                <span class="fs-sm">Home</span>
+              </RouterLink>
+              <RouterLink to="/about">
+                <span class="fs-sm">About</span>
+              </RouterLink>
+              <RouterLink to="/contact">
+                <span class="fs-sm">Contact</span>
+              </RouterLink>
+              <RouterLink to="/galleries">
+                <span class="fs-sm">Galleries</span>
+              </RouterLink>
+            </div>
+          </nav>
+        </div>
       </div>
       <div class="col-12 text-center mb-3">
-        <span class="fs-lg">Photography</span>
+        <span class="fs-lg no-mobile">Photography</span>
       </div>
     </div>
   </div>
-  <div id="nav" class="container-fluid nav-bg-bot elevation py-2">
+  <!-- larger screen nav -->
+  <div id="nav" class="container-fluid nav-bg-bot elevation py-2 no-mobile">
     <nav class="row">
       <div class="d-flex justify-content-center col-12">
         <RouterLink to="/">
-          <span class="links fs-md">Home</span>
+          <span class="fs-sm">Home</span>
         </RouterLink>
         <RouterLink to="/about">
-          <span class="links fs-md px-4">About</span>
+          <span class="fs-sm px-4">About</span>
         </RouterLink>
         <RouterLink to="/contact">
-          <span class="links fs-md">Contact</span>
+          <span class="fs-sm">Contact</span>
         </RouterLink>
         <RouterLink to="/galleries">
-          <span class="links fs-md px-4">Galleries</span>
+          <span class="fs-sm px-4">Galleries</span>
         </RouterLink>
       </div>
     </nav>
@@ -73,7 +100,7 @@ a:hover {
 
 @media (max-width: 576px) {
   .logo {
-    width: 6rem;
+    width: 12rem;
   }
 }
 </style>

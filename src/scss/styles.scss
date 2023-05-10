@@ -64,8 +64,33 @@
   padding-left: .2rem;
 }
 
-.links:hover {
-  border-bottom: 1px solid black;
+@media (min-width: 821px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+// Tablets
+@media (max-width: 820px) {
+  .fs-sm {
+    font-size: 18px;
+  }
+
+  .fs-md {
+    font-size: 20px;
+  }
+
+  .fs-lg {
+    font-size: 30px;
+  }
+
+  .fs-xl {
+    font-size: 38px;
+  }
+
+  .no-mobile {
+    display: none;
+  }
 }
 
 // Mobile
@@ -84,5 +109,9 @@
 
   .fs-xl {
     font-size: 34px;
+  }
+
+  .no-mobile {
+    display: none;
   }
 }
