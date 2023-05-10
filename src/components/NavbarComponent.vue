@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
 #nav .router-link-active {
-  transform: scale(1.3);
+  transform: scale(1.2);
   color: blue;
 }
 

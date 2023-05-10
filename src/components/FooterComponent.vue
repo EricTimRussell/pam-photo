@@ -1,5 +1,21 @@
 <template>
   <section class="container-fluid footer-bg">
+    <div class="row no-mobile">
+      <div class="d-flex justify-content-center col-12 mt-3">
+        <RouterLink to="/">
+          <span class="text-light">Home</span>
+        </RouterLink>
+        <RouterLink to="/about">
+          <span class="text-light px-4">About</span>
+        </RouterLink>
+        <RouterLink to="/contact">
+          <span class="text-light">Contact</span>
+        </RouterLink>
+        <RouterLink to="/galleries">
+          <span class="text-light px-4">Galleries</span>
+        </RouterLink>
+      </div>
+    </div>
     <div class="row justify-content-end py-4">
       <div class="col-1 d-flex justify-content-end btn-group dropup">
         <i class="selectable text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,11 +65,6 @@ export default {
   height: 5px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .admin-login {
   color: blue;
   border-radius: 50%;
@@ -62,5 +73,18 @@ a {
 li:hover {
   text-decoration: underline;
   transform: scale(1.1);
+}
+
+a {
+  color: inherit;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a:hover {
+  color: blue;
+}
+
+.router-link-active {
+  color: blue;
 }
 </style>
