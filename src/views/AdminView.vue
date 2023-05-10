@@ -37,7 +37,7 @@
       </div>
     </div>
     <!-- SECTION Summary Section -->
-    <div class="row bg-secondary pt-2">
+    <div class="row mb-3">
       <div class="col-12 d-flex justify-content-center">
         <h2>Edit Summary</h2>
       </div>
@@ -52,7 +52,7 @@
     </div>
     <!-- SECTION Featured Images Row 1 -->
     <div class="row pb-3 bg-secondary">
-      <div class="col-12 text-center mt-5">
+      <div class="col-12 text-center mt-3">
         <h2>Featured Images Row 1</h2>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
@@ -88,7 +88,7 @@
     </div>
     <!-- SECTION Featured Images Row 2 -->
     <div class="row py-3">
-      <div class="col-12 text-center mt-5">
+      <div class="col-12 text-center mt-3">
         <h2>Featured Images Row 2</h2>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
@@ -124,7 +124,7 @@
     </div>
     <!-- SECTION Featured Images Row 3 -->
     <div class="row bg-secondary pb-3">
-      <div class="col-12 text-center mt-5">
+      <div class="col-12 text-center mt-3">
         <h2>Featured Images Row 3</h2>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
@@ -159,7 +159,7 @@
       </div>
     </div>
     <!-- SECTION About Page Section -->
-    <div class="row pb-3 mt-5">
+    <div class="row pb-3 mt-3">
       <div class="col-12 d-flex flex-column align-items-center">
         <h2>Edit About</h2>
         <AboutImageFormComponent />

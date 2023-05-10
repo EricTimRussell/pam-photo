@@ -63,13 +63,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.personal-img {
-  object-fit: cover;
-  display: block;
-  width: 100%;
-  height: 70vh;
-}
-
 .height {
   min-height: 90vh;
 }
