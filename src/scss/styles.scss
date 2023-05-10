@@ -39,7 +39,7 @@
 }
 
 .fs-md {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .fs-lg {
@@ -66,4 +66,23 @@
 
 .links:hover {
   border-bottom: 1px solid black;
+}
+
+// Mobile
+@media (max-width: 576px) {
+  .fs-sm {
+    font-size: 16px;
+  }
+
+  .fs-md {
+    font-size: 18px;
+  }
+
+  .fs-lg {
+    font-size: 26px;
+  }
+
+  .fs-xl {
+    font-size: 34px;
+  }
 }

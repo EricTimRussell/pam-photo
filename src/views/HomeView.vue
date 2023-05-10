@@ -8,7 +8,7 @@
   <section class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-12 d-flex justify-content-center pt-5">
-        <h2 class="fs-xl">Welcome to Get Oustide Photography</h2>
+        <h2 class="fs-lg">Welcome to Get Oustide Photography</h2>
       </div>
       <div class="col-12 d-flex justify-content-center">
         <span class="section-divider"></span>
