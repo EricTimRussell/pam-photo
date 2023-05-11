@@ -4,5 +4,6 @@ export const appState = reactive({
   carousel: [],
   featuredImages: [],
   summary: [],
-  about: {}
+  about: {},
+  galleries: []
 })

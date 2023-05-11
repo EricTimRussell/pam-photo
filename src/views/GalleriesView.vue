@@ -5,43 +5,63 @@
         <h1>Flickr Galleries</h1>
         <div class="section-divider text-center"></div>
       </div>
-      <div v-if="user" class="col-12 text-end">
-        <button title="Create Gallery" class="btn btn-primary">
+      <div class="col-12 text-end">
+        <button title="Create Gallery" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createGallery">
           <span class="material-symbols-outlined fs-lg">
             add
           </span>
         </button>
       </div>
+      <div v-for="g in galleries">
+        <GalleryCardComponent :galleries="g" />
+      </div>
     </div>
   </div>
+  <ModalComponent id="createGallery">
+    <GalleryFormComponent />
+  </ModalComponent>
   <!-- TODO create functionality for admin to create link cards -->
   <!-- TODO create fancy card links that take you to flickr galleries with dynamic CSS classes -->
 </template>
 
 <script>
-import { addDoc, collection } from "firebase/firestore";
 import { useCurrentUser, useFirestore } from "vuefire";
-import { ref } from "vue";
+import { appState } from "../stores/AppState"
+import { computed } from "@vue/reactivity"
+import { onMounted } from "vue";
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
+import GalleryFormComponent from "../components/GalleryFormComponent.vue";
+import ModalComponent from "../components/ModalComponent.vue";
+import GalleryCardComponent from "../components/GalleryCardComponent.vue";
 
 export default {
   setup() {
-    const user = useCurrentUser()
     const db = useFirestore()
-    const editable = ref({})
-    return {
-      editable,
-      user,
-      async createGallery() {
-        try {
-          const newGallery = await addDoc(collection(db, 'galleries'), {
-            ...editable.value
+    const user = useCurrentUser()
+    async function getGalleriesDocs() {
+      try {
+        const q = query(collection(db, "galleries"));
+        const querySnapshot = await getDocs(q);
+        onSnapshot(q, (querySnapshot) => {
+          appState.galleries = []
+          querySnapshot.docs.map((doc) => {
+            // @ts-ignore
+            appState.galleries.push({ ...doc.data(), id: doc.id })
           });
-        } catch (error) {
-          console.error(error, 'Creating Gallery')
-        }
+        })
+      } catch (error) {
+        console.error(error)
       }
+    }
+
+    onMounted(() => {
+      getGalleriesDocs()
+    })
+    return {
+      galleries: computed(() => appState.galleries)
     };
   },
+  components: { ModalComponent, GalleryFormComponent, GalleryCardComponent }
 }
 </script>
 

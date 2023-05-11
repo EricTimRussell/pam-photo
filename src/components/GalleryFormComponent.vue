@@ -1,21 +1,47 @@
 <template>
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="galleryTitle" placeholder="title of gallery">
-    <label for="galleryTitle">Title</label>
-  </div>
-  <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-    <label for="floatingInput">Email address</label>
-  </div>
+  <form @submit.prevent="createGallery()">
+    <h1>Create Gallery</h1>
+    <div class="form-floating mb-3">
+      <input v-model="editable.title" type="text" class="form-control" id="galleryTitle" placeholder="title of gallery">
+      <label for="galleryTitle">Title</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input v-model="editable.url" type="text" class="form-control" id="galleryUrl" placeholder="www.gallery.com">
+      <label for="galleryUrl">URL</label>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Create</button>
+    </div>
+  </form>
 </template>
 
 <script>
+import { addDoc, collection } from "firebase/firestore";
+import { useCurrentUser, useFirestore } from "vuefire";
+import { ref } from "vue";
+
 export default {
   setup() {
+    const user = useCurrentUser()
+    const db = useFirestore()
+    const editable = ref({ title: '', url: '' })
 
-
-    return {}
-  }
+    return {
+      editable,
+      user,
+      async createGallery() {
+        try {
+          const newGallery = await addDoc(collection(db, 'galleries'), {
+            ...editable.value
+          });
+          editable.value = { title: '', url: '' }
+        } catch (error) {
+          console.error(error, 'Creating Gallery')
+        }
+      }
+    };
+  },
 }
 </script>
 
