@@ -5,15 +5,15 @@
         <h1>Flickr Galleries</h1>
         <div class="section-divider text-center"></div>
       </div>
-      <div class="col-12 text-end">
+      <div class="col-md-2 col-6" v-for="g in galleries">
+        <GalleryCardComponent :galleries="g" />
+      </div>
+      <div v-if="user" class="col-12 text-end">
         <button title="Create Gallery" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createGallery">
           <span class="material-symbols-outlined fs-lg">
             add
           </span>
         </button>
-      </div>
-      <div v-for="g in galleries">
-        <GalleryCardComponent :galleries="g" />
       </div>
     </div>
   </div>
@@ -58,6 +58,7 @@ export default {
       getGalleriesDocs()
     })
     return {
+      user,
       galleries: computed(() => appState.galleries)
     };
   },

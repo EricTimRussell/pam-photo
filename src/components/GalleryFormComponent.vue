@@ -9,6 +9,15 @@
       <input v-model="editable.url" type="text" class="form-control" id="galleryUrl" placeholder="www.gallery.com">
       <label for="galleryUrl">URL</label>
     </div>
+    <div class="form-floating">
+      <select v-model="editable.theme" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+        <option value="nature">Nature</option>
+        <option value="animals">Animals</option>
+        <option value="water">Water</option>
+        <option value="buildings">Buildings</option>
+      </select>
+      <label for="floatingSelect">Select Theme</label>
+    </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
       <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Create</button>
@@ -25,7 +34,7 @@ export default {
   setup() {
     const user = useCurrentUser()
     const db = useFirestore()
-    const editable = ref({ title: '', url: '' })
+    const editable = ref({ title: '', url: '', theme: '' })
 
     return {
       editable,
@@ -35,7 +44,7 @@ export default {
           const newGallery = await addDoc(collection(db, 'galleries'), {
             ...editable.value
           });
-          editable.value = { title: '', url: '' }
+          editable.value = { title: '', url: '', theme: '' }
         } catch (error) {
           console.error(error, 'Creating Gallery')
         }
