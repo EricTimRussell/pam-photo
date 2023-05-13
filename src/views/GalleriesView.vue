@@ -1,6 +1,13 @@
 <template>
   <div class="container-fluid height">
     <div class="row justify-content-center">
+      <div v-if="user" class="col-12 text-center mt-3">
+        <button title="Create Gallery" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createGallery">
+          <span class="material-symbols-outlined fs-lg">
+            add
+          </span>
+        </button>
+      </div>
       <div class="col-12 d-flex flex-column align-items-center mt-3 mb-3">
         <h1>Flickr Galleries</h1>
         <div class="section-divider text-center"></div>
@@ -8,20 +15,11 @@
       <div class="col-md-2 col-6" v-for="g in galleries">
         <GalleryCardComponent :galleries="g" />
       </div>
-      <div v-if="user" class="col-12 text-end">
-        <button title="Create Gallery" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createGallery">
-          <span class="material-symbols-outlined fs-lg">
-            add
-          </span>
-        </button>
-      </div>
     </div>
   </div>
   <ModalComponent id="createGallery">
     <GalleryFormComponent />
   </ModalComponent>
-  <!-- TODO create functionality for admin to create link cards -->
-  <!-- TODO create fancy card links that take you to flickr galleries with dynamic CSS classes -->
 </template>
 
 <script>
