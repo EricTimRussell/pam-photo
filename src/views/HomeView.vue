@@ -1,11 +1,11 @@
 <template>
   <!-- HERO -->
-  <div>
+  <div class="fade-in">
     <HeroComponent :carousel="carousel" />
   </div>
 
   <!-- Introduction -->
-  <section class="container-fluid">
+  <section class="container-fluid fade-in">
     <div class="row justify-content-center">
       <div class="col-12 d-flex justify-content-center pt-5">
         <h2 class="fs-lg">Welcome to Get Oustide Photography</h2>
@@ -18,7 +18,7 @@
   </section>
 
   <!-- Featured Images -->
-  <div>
+  <div class="fade-in">
     <FeaturedImagesComponent :featured="featured" />
   </div>
 </template>

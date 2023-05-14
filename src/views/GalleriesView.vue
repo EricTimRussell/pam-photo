@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid height">
+  <div class="container-fluid height fade-in">
     <div class="row justify-content-center">
       <div v-if="user" class="col-12 text-center mt-3">
         <button title="Create Gallery" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createGallery">
@@ -12,6 +12,8 @@
         <h1>Flickr Galleries</h1>
         <div class="section-divider text-center"></div>
       </div>
+    </div>
+    <div class="row d-flex justify-content-evenly">
       <div class="col-md-2 col-6" v-for="g in galleries">
         <GalleryCardComponent :galleries="g" />
       </div>

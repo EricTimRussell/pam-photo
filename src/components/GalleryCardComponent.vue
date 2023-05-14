@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-  <!-- TODO add delete function and multiple background choices -->
+  <!-- TODO add multiple background choices -->
 </template>
 <script>
 import { deleteDoc, doc } from "firebase/firestore";
