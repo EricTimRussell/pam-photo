@@ -1,5 +1,5 @@
 <template>
-  <body class="container-fluid">
+  <body class="container-fluid view-height">
     <form class="row flex-column align-items-center">
       <div class="my-3 col-6">
         <label for="email" class="form-label">Email address</label>
@@ -61,4 +61,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.view-height {
+  height: 60vh;
+}
+</style>
