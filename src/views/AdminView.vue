@@ -199,7 +199,7 @@ import FeaturedImage6FormComponent from "../components/featuredImages/FeaturedIm
 import FeaturedImage7FormComponent from "../components/featuredImages/FeaturedImage7FormComponent.vue";
 import FeaturedImage8FormComponent from "../components/featuredImages/FeaturedImage8FormComponent.vue";
 import FeaturedImage9FormComponent from "../components/featuredImages/FeaturedImage9FormComponent.vue";
-import CarouselImage1DetailsForm from "../components/carousel/CarouselImgae1DetailsForm.vue";
+import CarouselImage1DetailsForm from "../components/carousel/CarouselImage1DetailsForm.vue";
 import ModalComponent from "../components/ModalComponent.vue";
 import CarouselImage2DetailsForm from "../components/carousel/CarouselImage2DetailsForm.vue";
 import CarouselImage3DetailsForm from "../components/carousel/CarouselImage3DetailsForm.vue";

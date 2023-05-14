@@ -4,7 +4,7 @@
     <section class="container-fluid height fade-in">
       <div class="row justify-content-center mb-5">
         <div class="col-12 d-flex justify-content-center pt-5">
-          <h2>About Section</h2>
+          <h2>About Pamela Russell</h2>
         </div>
         <div class="col-12 d-flex justify-content-center">
           <span class="section-divider"></span>

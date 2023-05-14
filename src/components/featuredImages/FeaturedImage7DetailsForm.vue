@@ -5,7 +5,8 @@
       <label for="title">Title</label>
     </div>
     <div class="form-floating mb-3">
-      <textarea v-model="editable.description" class="form-control" id="description" aria-label="textarea" required>
+      <textarea v-model="editable.description" style="height: 125px;" maxlength="325" class="form-control"
+        id="description" aria-label="textarea" required>
       </textarea>
       <label for="description">Description</label>
     </div>
