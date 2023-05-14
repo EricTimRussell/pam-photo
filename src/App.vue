@@ -9,9 +9,6 @@ import FooterComponent from "./components/FooterComponent.vue";
 </script>
 
 <template>
-  <!-- <div oncontextmenu="return false"> -->
-
-
   <header>
     <NavbarComponent />
   </header>
@@ -23,8 +20,6 @@ import FooterComponent from "./components/FooterComponent.vue";
   <footer>
     <FooterComponent />
   </footer>
-
-  <!-- </div> -->
 </template>
 
 <style scoped>

@@ -1,5 +1,6 @@
 <template>
   <section class="container-fluid footer-bg">
+    <!-- large screen navigation -->
     <div class="row no-mobile">
       <div class="d-flex justify-content-center col-12 mt-3">
         <RouterLink to="/">
@@ -16,6 +17,7 @@
         </RouterLink>
       </div>
     </div>
+    <!-- Admin controls -->
     <div class="row justify-content-end py-4">
       <div class="col-1 d-flex justify-content-end btn-group dropup">
         <i class="selectable text-secondary" data-bs-toggle="dropdown" aria-expanded="false">

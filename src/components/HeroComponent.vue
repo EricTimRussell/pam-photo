@@ -33,7 +33,7 @@
   </div>
 
 
-  <!-- Carousel Modals -->
+  <!-- Carousel Image Modals -->
   <div class="modal fade" id="carousel-Img1-modal" tabindex="-1" aria-labelledby="carousel image" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-center">
       <div class="modal-content">

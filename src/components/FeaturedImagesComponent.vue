@@ -56,6 +56,7 @@
     </div>
   </section>
 
+  <!-- featured images modals -->
   <ModalComponent id="featured1">
     <FeaturedImageCard :url="url1" :featured="featured[0]" />
   </ModalComponent>
@@ -97,6 +98,8 @@ export default {
   },
   setup() {
     const storage = useFirebaseStorage();
+
+    // get image from firebase
     const featuredImg1 = storageRef(storage, `featuredImg1`);
     const featuredImg2 = storageRef(storage, `featuredImg2`);
     const featuredImg3 = storageRef(storage, `featuredImg3`);
@@ -106,6 +109,8 @@ export default {
     const featuredImg7 = storageRef(storage, `featuredImg7`);
     const featuredImg8 = storageRef(storage, `featuredImg8`);
     const featuredImg9 = storageRef(storage, `featuredImg9`);
+
+    // set and rename image urls
     const { url: url1 } = useStorageFile(featuredImg1);
     const { url: url2 } = useStorageFile(featuredImg2);
     const { url: url3 } = useStorageFile(featuredImg3);
