@@ -1,7 +1,8 @@
 <template>
   <form @submit.prevent="editFeaturedImage3Details()">
     <div class="form-floating mb-3">
-      <input type="text" v-model="editable.title" class="form-control" id="title" placeholder="Image Title" required>
+      <input type="text" v-model="editable.title" maxlength="32" class="form-control" id="title" placeholder="Image Title"
+        required>
       <label for="title">Title</label>
     </div>
     <div class="form-floating mb-3">
