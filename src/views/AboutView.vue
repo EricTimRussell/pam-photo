@@ -13,7 +13,7 @@
           <img class="personal-img" :src="personalImg || undefined" alt="">
         </div>
         <div class="col-sm-12 col-md-7 d-flex pt-3 px-4">
-          <p>{{ about?.about }}</p>
+          <p>{{ about?.about }}</p>a
         </div>
       </div>
     </section>
