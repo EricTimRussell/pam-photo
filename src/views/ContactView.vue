@@ -13,20 +13,19 @@
       </div>
     </div>
     <div class="row">
-      <h1>Etsy Page</h1>
+      <h1>Etsy Page will go here</h1>
     </div>
     <div class="col-12 d-flex justify-content-center">
       <div class="section-divider"></div>
     </div>
     <div class="row">
       <div class="col-12 my-4">
-        <a class="selectable" href="https://www.flickr.com/photos/197012563@N05/">
+        <a target="_blank" class="selectable" href="https://www.flickr.com/photos/197012563@N05/">
           <img class="flickr-mobile" src="../assets/flickrBG.png" alt="flickr profile image">
         </a>
       </div>
     </div>
   </div>
-  <!-- TODO Create form for email contact -->
   <!-- TODO Create fancy links to etsy and flickr -->
 </template>
 

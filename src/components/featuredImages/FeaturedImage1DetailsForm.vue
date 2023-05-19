@@ -12,12 +12,13 @@
       <label for="description">Description</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="text" v-model="editable.location" class="form-control" id="location" placeholder="Photo Location"
-        required>
+      <input type="text" v-model="editable.location" maxlength="32" class="form-control" id="location"
+        placeholder="Photo Location" required>
       <label for="location">Loaction</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="text" v-model="editable.date" class="form-control" id="date" placeholder="Photo date" required>
+      <input type="text" v-model="editable.date" maxlength="20" class="form-control" id="date" placeholder="Photo date"
+        required>
       <label for="date">Date Taken</label>
     </div>
     <div class="modal-footer">
