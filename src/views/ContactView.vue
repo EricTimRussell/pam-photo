@@ -26,7 +26,6 @@
       </div>
     </div>
   </div>
-  <!-- TODO Create fancy links to etsy and flickr -->
 </template>
 
 <script>
