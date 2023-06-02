@@ -15,7 +15,6 @@
         <option value="animals">Animals</option>
         <option value="water">Water</option>
         <option value="buildings">Buildings</option>
-        <!-- TODO add more tags -->
       </select>
       <label for="floatingSelect">Select Theme</label>
     </div>
