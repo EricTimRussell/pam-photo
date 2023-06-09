@@ -39,7 +39,7 @@
     <!-- SECTION Summary Section -->
     <div class="row mb-3 pt-3">
       <div class="col-12 d-flex justify-content-center">
-        <h2>Edit Summary</h2>
+        <h2>Summary</h2>
       </div>
       <div class="col-12 d-flex justify-content-center">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#summary">
@@ -164,7 +164,7 @@
         <h2>Edit About</h2>
         <AboutImageFormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#about">
-          Edit About
+          Edit About Details
         </button>
         <ModalComponent id="about">
           <AboutFormComponent :about="about" />

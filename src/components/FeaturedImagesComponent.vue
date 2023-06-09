@@ -2,14 +2,11 @@
   <!-- Featured Images -->
   <section class="container-fluid mb-5">
     <div class="row">
-      <div class="col-12 d-flex justify-content-center pt-5">
-        <h2 class="fs-xl">Featured Photo's</h2>
-      </div>
       <div class="col-12 d-flex justify-content-center">
         <span class="section-divider"></span>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pt-5">
       <!-- photo row 1 -->
       <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable" :src="url1"
