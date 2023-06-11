@@ -34,6 +34,9 @@
               <RouterLink to="/galleries">
                 <span class="fs-sm">Galleries</span>
               </RouterLink>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <span class="fs-sm">Shop</span>
+              </a>
             </div>
           </nav>
         </div>
@@ -59,6 +62,9 @@
         <RouterLink to="/galleries">
           <span class="fs-sm px-4">Galleries</span>
         </RouterLink>
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <span class="fs-sm">Shop</span>
+        </a>
       </div>
     </nav>
   </div>
