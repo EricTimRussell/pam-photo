@@ -73,7 +73,7 @@ a {
 }
 
 .height {
-  height: 75vh;
+  min-height: 75vh;
 }
 
 .section-divider {

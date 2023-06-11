@@ -12,9 +12,6 @@
         </a>
       </div>
     </div>
-    <div class="row">
-      <h1>Etsy Page will go here</h1>
-    </div>
     <div class="col-12 d-flex justify-content-center">
       <div class="section-divider"></div>
     </div>
@@ -40,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 .view-height {
-  height: 60vh;
+  min-height: 60vh;
 }
 
 .section-divider {
@@ -56,7 +53,7 @@ export default {
   }
 
   .view-height {
-    height: 50vh;
+    min-height: 50vh;
   }
 }
 </style>

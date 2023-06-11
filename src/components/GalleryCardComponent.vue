@@ -7,7 +7,7 @@
           delete_forever
         </span>
         <a :href="galleries.url" target="_blank">
-          <h6 class="flickr-title d-flex flex-column align-items-center mt-5">{{ galleries.title }}</h6>
+          <span class="flickr-title d-flex flex-column align-items-center fs-md mt-5">{{ galleries.title }}</span>
         </a>
       </div>
     </div>
@@ -59,6 +59,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+  color: none;
+}
+
 .flickr-card {
   background-image: url(../assets/placeholder.jpg);
   background-size: cover;
@@ -69,9 +74,10 @@ export default {
 }
 
 .flickr-title {
-  color: #a9aaa2;
+  color: #ffffff;
   text-shadow: 3px 2px black;
   font-weight: bolder;
+  letter-spacing: 5px;
 }
 
 .delete-icon:hover {
