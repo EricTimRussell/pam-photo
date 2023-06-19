@@ -1,6 +1,14 @@
 <template>
   <div class="container-fluid view-height">
     <div class="row">
+      <div class="col-12 my-4">
+        <a target="_blank" class="selectable" href="https://www.flickr.com/photos/197012563@N05/">
+          <img class="flickr-mobile" src="../assets/flickrBG.png" alt="flickr profile image">
+        </a>
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <div class="section-divider"></div>
+      </div>
       <div class="col-12 d-flex justify-content-center p-3">
         <span class="material-symbols-outlined fs-lg">
           mail
@@ -9,16 +17,6 @@
         <!-- TODO Moms new email -->
         <a href="mailto:EricTim.Russell@live.com">
           <p>MOMS email</p>
-        </a>
-      </div>
-    </div>
-    <div class="col-12 d-flex justify-content-center">
-      <div class="section-divider"></div>
-    </div>
-    <div class="row">
-      <div class="col-12 my-4">
-        <a target="_blank" class="selectable" href="https://www.flickr.com/photos/197012563@N05/">
-          <img class="flickr-mobile" src="../assets/flickrBG.png" alt="flickr profile image">
         </a>
       </div>
     </div>
