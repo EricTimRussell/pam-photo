@@ -15,7 +15,9 @@
         </span>
         <p>{{ carousel?.location }}</p>
         <p class="px-5">{{ carousel?.date }}</p>
-        <a href="">Link to store</a>
+        <a href=""><span class="material-symbols-outlined">
+            shopping_bag
+          </span>Link to store</a>
       </div>
     </div>
   </div>
