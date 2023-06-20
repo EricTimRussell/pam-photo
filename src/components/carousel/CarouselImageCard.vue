@@ -15,9 +15,9 @@
         </span>
         <p>{{ carousel?.location }}</p>
         <p class="px-5">{{ carousel?.date }}</p>
-        <a href=""><span class="material-symbols-outlined">
+        <a href="" title="Shop"><span class="material-symbols-outlined">
             shopping_bag
-          </span>Link to store</a>
+          </span></a>
       </div>
     </div>
   </div>
@@ -50,5 +50,14 @@ export default {
   display: block;
   width: 90%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #45453a;
+}
+
+a:hover {
+  transform: scale(1.2);
 }
 </style>
