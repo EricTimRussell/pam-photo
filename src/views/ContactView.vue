@@ -19,6 +19,10 @@
           <p>MOMS email</p>
         </a>
       </div>
+      <!-- TODO store banner -->
+      <div class="col-12">
+        <a href="">Contact Page on store</a>
+      </div>
     </div>
   </div>
 </template>

@@ -15,6 +15,7 @@
         </span>
         <p>{{ featured?.location }}</p>
         <p class="px-5">{{ featured?.date }}</p>
+        <a href="">Link to Store</a>
       </div>
     </div>
   </div>
