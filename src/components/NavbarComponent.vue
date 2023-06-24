@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid nav-bg-top pt-2">
+  <div class="container-fluid nav-bg-top pt-2 bg-nav">
     <div class="row justify-content-center">
       <div class="col-4 text-end">
         <span class="fs-lg no-mobile">Get</span>

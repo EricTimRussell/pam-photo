@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-8">
-        <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url1" alt="">
+        <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url1 || url2 || url3" alt="">
       </div>
       <div class="col-4 d-flex flex-column">
         <h2>{{ carousel?.title }}</h2>
@@ -24,21 +24,17 @@
 </template>
 
 <script>
-import { useFirebaseStorage, useStorageFile } from "vuefire";
-import { ref as storageRef } from 'firebase/storage'
 
 export default {
   props: {
+    carousel: { type: Object, required: false },
     url1: { type: String, required: false },
-    carousel: { type: Object, required: false }
+    url2: { type: String, required: false },
+    url3: { type: String, required: false }
   },
   setup() {
-    const storage = useFirebaseStorage();
-    const carouselImg1 = storageRef(storage, `carouselImg1`);
-    const { url: url1 } = useStorageFile(carouselImg1);
 
     return {
-      url1
     }
   }
 }
