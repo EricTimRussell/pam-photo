@@ -1,35 +1,13 @@
-# pam-photo
+# Get Outside Photography
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a custom made website that will enable the owner to edit much of website to their liking without any coding knowledge.
 
-## Recommended IDE Setup
+## Technology and Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Get Outside Photography is a photo gallery and online marketplace. The owner will be able to feature some of their best photography, art, or graphic designs that will be linked to an online marketplace supported by Shopify. Using a custom website will give the owner more control over some of their best products. While using Shopify will allow them to better manage their online marketplace without the need for a hefty custom website that requires software development knowledge to manage and maintain.
 
-## Customize configuration
+Gallery website primarily utilizes Vue.js, Bootstrap, and Google Firebase.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Progress
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+This website is currently still under construction.
