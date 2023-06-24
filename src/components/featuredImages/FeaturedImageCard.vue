@@ -2,7 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-8">
-        <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url1" alt="">
+        <img class="modal-img" oncontextmenu="return false" ondragstart="return false"
+          :src="url1 || url2 || url3 || url4 || url5 || url6 || url7 || url8 || url9" alt="">
       </div>
       <div class="col-4 d-flex flex-column">
         <h2>{{ featured?.title }}</h2>
@@ -24,21 +25,23 @@
 </template>
 
 <script>
-import { useFirebaseStorage, useStorageFile } from "vuefire";
-import { ref as storageRef } from 'firebase/storage'
 
 export default {
   props: {
     url1: { type: String, required: false },
+    url2: { type: String, required: false },
+    url3: { type: String, required: false },
+    url4: { type: String, required: false },
+    url5: { type: String, required: false },
+    url6: { type: String, required: false },
+    url7: { type: String, required: false },
+    url8: { type: String, required: false },
+    url9: { type: String, required: false },
     featured: { type: Object, required: false }
   },
   setup() {
-    const storage = useFirebaseStorage();
-    const featuredImg1 = storageRef(storage, `featuredImg1`);
-    const { url: url1 } = useStorageFile(featuredImg1);
 
     return {
-      url1
     }
   }
 }
@@ -46,7 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 .modal-img {
-  object-fit: cover;
+  object-fit: fill;
   display: block;
   width: 90%;
   height: auto;

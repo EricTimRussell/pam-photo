@@ -55,31 +55,31 @@
 
   <!-- featured images modals -->
   <ModalComponent id="featured1">
-    <FeaturedImageCard :url="url1" :featured="featured[0]" />
+    <FeaturedImageCard :url1="url1" :featured="featured[0]" />
   </ModalComponent>
   <ModalComponent id="featured2">
-    <FeaturedImageCard :url="url2" :featured="featured[1]" />
+    <FeaturedImageCard :url2="url2" :featured="featured[1]" />
   </ModalComponent>
   <ModalComponent id="featured3">
-    <FeaturedImageCard :url="url3" :featured="featured[2]" />
+    <FeaturedImageCard :url3="url3" :featured="featured[2]" />
   </ModalComponent>
   <ModalComponent id="featured4">
-    <FeaturedImageCard :url="url4" :featured="featured[3]" />
+    <FeaturedImageCard :url4="url4" :featured="featured[3]" />
   </ModalComponent>
   <ModalComponent id="featured5">
-    <FeaturedImageCard :url="url5" :featured="featured[4]" />
+    <FeaturedImageCard :url5="url5" :featured="featured[4]" />
   </ModalComponent>
   <ModalComponent id="featured6">
-    <FeaturedImageCard :url="url6" :featured="featured[5]" />
+    <FeaturedImageCard :url6="url6" :featured="featured[5]" />
   </ModalComponent>
   <ModalComponent id="featured7">
-    <FeaturedImageCard :url="url7" :featured="featured[6]" />
+    <FeaturedImageCard :url7="url7" :featured="featured[6]" />
   </ModalComponent>
   <ModalComponent id="featured8">
-    <FeaturedImageCard :url="url8" :featured="featured[7]" />
+    <FeaturedImageCard :url8="url8" :featured="featured[7]" />
   </ModalComponent>
   <ModalComponent id="featured9">
-    <FeaturedImageCard :url="url9" :featured="featured[8]" />
+    <FeaturedImageCard :url9="url9" :featured="featured[8]" />
   </ModalComponent>
 </template>
 
