@@ -8,7 +8,7 @@
           </span>
         </button>
       </div>
-      <div class="col-12 d-flex flex-column align-items-center mt-3 mb-3">
+      <div class="col-12 d-flex flex-column align-items-center mt-3 mb-5">
         <h1>Flickr Galleries</h1>
         <div class="section-divider text-center"></div>
       </div>

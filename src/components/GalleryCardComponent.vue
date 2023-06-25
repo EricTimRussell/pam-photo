@@ -7,7 +7,7 @@
           delete_forever
         </span>
         <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-md mt-5">{{ galleries.title }}</span>
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
         </a>
       </div>
     </div>
@@ -67,17 +67,21 @@ a {
 .flickr-card {
   background-image: url(../assets/placeholder.jpg);
   background-size: cover;
-  height: 12rem;
-  width: 12rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
+.flickr-card:hover {
+  transform: scale(1.2);
+}
+
 .flickr-title {
-  color: #ffffff;
-  text-shadow: 3px 2px black;
+  color: #140096;
+  text-shadow: 3px 2px #d9d9d9;
   font-weight: bolder;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
 }
 
 .delete-icon:hover {
