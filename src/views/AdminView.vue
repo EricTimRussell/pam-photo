@@ -56,7 +56,7 @@
         <h2>Featured Images Row 1</h2>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 1</h3>
+        <h3>Image 1 Portrait Size</h3>
         <FeaturedImage1FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured1">
           Edit Details
@@ -66,7 +66,7 @@
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 2</h3>
+        <h3>Image 2 Normal Size</h3>
         <FeaturedImage2FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured2">
           Edit Details
@@ -76,7 +76,7 @@
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 3</h3>
+        <h3>Image 3 Normal Size</h3>
         <FeaturedImage3FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured3">
           Edit Details
@@ -92,7 +92,7 @@
         <h2>Featured Images Row 2</h2>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 1</h3>
+        <h3>Image 1 Landscape Size</h3>
         <FeaturedImage4FormComponet />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured4">
           Edit Details
@@ -102,7 +102,7 @@
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 2</h3>
+        <h3>Image 2 Portrait Size</h3>
         <FeaturedImage5FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured5">
           Edit Details
@@ -112,7 +112,7 @@
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 3</h3>
+        <h3>Image 3 Regular Size</h3>
         <FeaturedImage6FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured6">
           Edit Details
@@ -128,7 +128,7 @@
         <h2>Featured Images Row 3</h2>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 1</h3>
+        <h3>Image 1 Portrait Size</h3>
         <FeaturedImage7FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured7">
           Edit Details
@@ -138,7 +138,7 @@
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 2</h3>
+        <h3>Image 2 Landscape Size</h3>
         <FeaturedImage8FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured8">
           Edit Details
@@ -148,7 +148,7 @@
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Image 3</h3>
+        <h3>Image 3 Portrait Size</h3>
         <FeaturedImage9FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured9">
           Edit Details
