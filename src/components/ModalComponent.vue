@@ -1,9 +1,4 @@
 <template>
-  <!-- Button trigger modal -->
-  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#image-details">
-    Edit Details
-  </button> -->
-
   <!-- Modal -->
   <div class="modal fade" id="image-details" tabindex="-1" aria-labelledby="image-detailsLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-center">

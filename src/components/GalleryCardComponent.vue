@@ -1,79 +1,75 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div v-if="galleries.theme == 'birds'" class="col-sm-12 col-md-4 col-lg-3 col-4 flickr-birds mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-      <div v-if="galleries.theme == 'animals'" class="col-sm-12 col-md-4 col-lg-3 flickr-animals mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-      <div v-if="galleries.theme == 'flowers'" class="col-sm-12 col-md-4 col-lg-3 flickr-flowers mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-      <div v-if="galleries.theme == 'water'" class="col-sm-12 col-md-4 col-lg-3 flickr-water mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-      <div v-if="galleries.theme == 'landscapes'" class="col-sm-12 col-md-4 col-lg-3 flickr-landscapes mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-      <div v-if="galleries.theme == 'rural'" class="col-sm-12 col-md-4 col-lg-3 flickr-rural mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-      <div v-if="galleries.theme == 'still life'" class="col-sm-12 col-md-4 col-lg-3 flickr-still-life mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-      <div v-if="galleries.theme == 'sunsets'" class="col-sm-12 col-md-4 col-lg-3 flickr-sunsets mb-5">
-        <span v-if="user" @click="deleteGallery()" title="delete"
-          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
-          delete_forever
-        </span>
-        <a :href="galleries.url" target="_blank">
-          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
-        </a>
-      </div>
-    </div>
+  <div v-if="galleries.theme == 'birds'" class="flickr-birds mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
+  </div>
+  <div v-if="galleries.theme == 'animals'" class="flickr-animals mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
+  </div>
+  <div v-if="galleries.theme == 'flowers'" class="flickr-flowers mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
+  </div>
+  <div v-if="galleries.theme == 'water'" class="flickr-water mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
+  </div>
+  <div v-if="galleries.theme == 'landscapes'" class="flickr-landscapes mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
+  </div>
+  <div v-if="galleries.theme == 'rural'" class="flickr-rural mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
+  </div>
+  <div v-if="galleries.theme == 'still life'" class="flickr-still-life mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
+  </div>
+  <div v-if="galleries.theme == 'sunsets'" class="flickr-sunsets mb-5">
+    <span v-if="user" @click="deleteGallery()" title="delete"
+      class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+      delete_forever
+    </span>
+    <a :href="galleries.url" target="_blank">
+      <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+    </a>
   </div>
 </template>
 <script>
@@ -130,13 +126,14 @@ a {
   background-image: url(../assets/galleries/birds.jpg);
   background-size: cover;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-birds:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-animals {
@@ -144,13 +141,14 @@ a {
   background-size: cover;
   background-position: center;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-animals:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-flowers {
@@ -158,13 +156,14 @@ a {
   background-size: cover;
   background-position: center;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-flowers:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-water {
@@ -172,13 +171,14 @@ a {
   background-size: cover;
   background-position: center;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-water:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-landscapes {
@@ -186,13 +186,14 @@ a {
   background-size: cover;
   background-position: center;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-landscapes:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-rural {
@@ -200,13 +201,14 @@ a {
   background-size: cover;
   background-position: center;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-rural:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-still-life {
@@ -214,13 +216,14 @@ a {
   background-size: cover;
   background-position: center;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-still-life:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-sunsets {
@@ -228,17 +231,18 @@ a {
   background-size: cover;
   background-position: center;
   height: 20rem;
-  width: 20rem;
+  width: 26rem;
   border-radius: 5px;
   border: 2px solid #45453a;
 }
 
 .flickr-sunsets:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 
 .flickr-title {
-  color: #140096;
+  color: blue;
   text-shadow: 3px 2px #d9d9d9;
   font-weight: bolder;
   letter-spacing: 7px;
@@ -246,5 +250,6 @@ a {
 
 .delete-icon:hover {
   border: 3px solid blue;
+  transform: scale(1.1);
 }
 </style>

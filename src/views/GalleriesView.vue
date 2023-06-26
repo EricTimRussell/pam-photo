@@ -13,8 +13,8 @@
         <div class="section-divider text-center"></div>
       </div>
     </div>
-    <div class="row d-flex justify-content-evenly">
-      <div class="col-md-2 col-6" v-for="g in galleries">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-12 col-md-4 col-lg-3 col-12 d-flex justify-content-center" v-for="g in galleries">
         <GalleryCardComponent :galleries="g" />
       </div>
     </div>
