@@ -103,10 +103,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.section-divider {
-  background-color: gray;
-  width: 200px;
-  height: 5px;
-}
-</style>
+<style scoped></style>

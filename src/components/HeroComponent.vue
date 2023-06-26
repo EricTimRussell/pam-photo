@@ -114,7 +114,7 @@ export default {
   object-fit: fill;
   display: block;
   min-width: 100%;
-  height: 58vh;
+  height: 60vh;
 }
 
 .carousel-container {
