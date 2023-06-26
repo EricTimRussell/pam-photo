@@ -51,7 +51,7 @@
       </div>
     </div>
     <!-- SECTION Featured Images Row 1 -->
-    <div class="row pb-3 bg-secondary elevation">
+    <div class="row py-3 bg-secondary elevation">
       <div class="col-12 text-center mt-3">
         <h2>Featured Images Row 1</h2>
       </div>
@@ -123,7 +123,7 @@
       </div>
     </div>
     <!-- SECTION Featured Images Row 3 -->
-    <div class="row bg-secondary pb-3 elevation">
+    <div class="row bg-secondary py-3 elevation">
       <div class="col-12 text-center mt-3">
         <h2>Featured Images Row 3</h2>
       </div>

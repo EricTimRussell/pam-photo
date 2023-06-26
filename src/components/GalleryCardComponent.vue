@@ -10,9 +10,71 @@
           <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
         </a>
       </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 flickr-card mb-3">
+        <span v-if="user" @click="deleteGallery()" title="delete"
+          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+          delete_forever
+        </span>
+        <a :href="galleries.url" target="_blank">
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 flickr-card mb-3">
+        <span v-if="user" @click="deleteGallery()" title="delete"
+          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+          delete_forever
+        </span>
+        <a :href="galleries.url" target="_blank">
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 flickr-card mb-3">
+        <span v-if="user" @click="deleteGallery()" title="delete"
+          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+          delete_forever
+        </span>
+        <a :href="galleries.url" target="_blank">
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 flickr-card mb-3">
+        <span v-if="user" @click="deleteGallery()" title="delete"
+          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+          delete_forever
+        </span>
+        <a :href="galleries.url" target="_blank">
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 flickr-card mb-3">
+        <span v-if="user" @click="deleteGallery()" title="delete"
+          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+          delete_forever
+        </span>
+        <a :href="galleries.url" target="_blank">
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 flickr-card mb-3">
+        <span v-if="user" @click="deleteGallery()" title="delete"
+          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+          delete_forever
+        </span>
+        <a :href="galleries.url" target="_blank">
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 flickr-card mb-3">
+        <span v-if="user" @click="deleteGallery()" title="delete"
+          class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
+          delete_forever
+        </span>
+        <a :href="galleries.url" target="_blank">
+          <span class="flickr-title d-flex flex-column align-items-center fs-lg mt-5">{{ galleries.title }}</span>
+        </a>
+      </div>
     </div>
   </div>
-  <!-- TODO add multiple background choices based on theme-->
 </template>
 <script>
 import { deleteDoc, doc } from "firebase/firestore";

@@ -11,10 +11,14 @@
     </div>
     <div class="form-floating">
       <select v-model="editable.theme" class="form-select" id="floatingSelect" aria-label="Floating label select example">
-        <option value="nature">Nature</option>
+        <option value="nature">Birds</option>
         <option value="animals">Animals</option>
-        <option value="water">Water</option>
-        <option value="buildings">Buildings</option>
+        <option value="water">Lakes & Streams</option>
+        <option value="buildings">Rural</option>
+        <option value="buildings">Still Life</option>
+        <option value="buildings">Sunsets</option>
+        <option value="buildings">Landscapes</option>
+        <option value="buildings">Flowers</option>
       </select>
       <label for="floatingSelect">Select Theme</label>
     </div>

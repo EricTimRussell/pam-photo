@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-7 d-flex pt-3 px-4">
+  <div class="col-md-7 d-flex py-5 px-4">
     {{ summary?.summary }}
   </div>
 </template>
