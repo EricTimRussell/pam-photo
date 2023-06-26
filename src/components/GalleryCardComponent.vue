@@ -249,7 +249,6 @@ a {
 }
 
 .delete-icon:hover {
-  border: 3px solid blue;
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 </style>
