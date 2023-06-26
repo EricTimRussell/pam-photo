@@ -136,7 +136,7 @@ a {
 }
 
 .flickr-birds:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-animals {
@@ -150,7 +150,7 @@ a {
 }
 
 .flickr-animals:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-flowers {
@@ -164,7 +164,7 @@ a {
 }
 
 .flickr-flowers:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-water {
@@ -178,7 +178,7 @@ a {
 }
 
 .flickr-water:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-landscapes {
@@ -192,7 +192,7 @@ a {
 }
 
 .flickr-landscapes:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-rural {
@@ -206,7 +206,7 @@ a {
 }
 
 .flickr-rural:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-still-life {
@@ -220,7 +220,7 @@ a {
 }
 
 .flickr-still-life:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-sunsets {
@@ -234,7 +234,7 @@ a {
 }
 
 .flickr-sunsets:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 
 .flickr-title {
@@ -245,6 +245,6 @@ a {
 }
 
 .delete-icon:hover {
-  transform: scale(1.1);
+  border: 3px solid blue;
 }
 </style>
