@@ -86,6 +86,8 @@
 <script>
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
+// Unknown ts error?
+// @ts-ignore
 import CarouselImageCard from "../components/carousel/CarouselImageCard.vue";
 export default {
   props: {
