@@ -3,17 +3,17 @@
     <!-- About Me Section -->
     <section class="container-fluid height fade-in">
       <div class="row justify-content-center mb-5">
-        <div class="col-12 d-flex justify-content-center pt-5">
+        <div class="col-12 d-flex justify-content-center pt-4">
           <h2>About Pamela Russell</h2>
         </div>
-        <div class="col-12 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center pb-5">
           <span class="section-divider"></span>
         </div>
         <div class="col-sm-12 col-md-4">
           <img class="personal-img" :src="personalImg || undefined" alt="">
         </div>
-        <div class="col-sm-12 col-md-7 d-flex pt-3 px-4">
-          <p>{{ about?.about }}</p>a
+        <div class="col-sm-12 col-md-7 d-flex px-4">
+          <p>{{ about?.about }}</p>
         </div>
       </div>
     </section>
