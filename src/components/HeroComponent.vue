@@ -137,7 +137,7 @@ export default {
     object-fit: cover;
     display: block;
     width: auto;
-    height: 25vh;
+    height: 15rem;
   }
 
   .ml {

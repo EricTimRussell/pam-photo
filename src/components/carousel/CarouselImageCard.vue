@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-8">
+      <div class="col-12 col-md-8 col-lg-8">
         <img class="modal-img" oncontextmenu="return false" ondragstart="return false" :src="url1 || url2 || url3" alt="">
       </div>
-      <div class="col-4 d-flex flex-column">
+      <div class="col-12 col-md-4 col-lg-4 d-flex flex-column pt-4">
         <h2>{{ carousel?.title }}</h2>
         <p>{{ carousel?.description }}
         </p>
@@ -55,5 +55,11 @@ a {
 
 a:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+  .modal-img {
+    width: 100%;
+  }
 }
 </style>
