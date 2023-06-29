@@ -15,6 +15,8 @@ import router from './router'
 
 import './assets/main.css'
 
+import { MotionPlugin } from "@vueuse/motion"
+
 const app = createApp(App)
 
 app.use(VueFire, {
@@ -25,4 +27,5 @@ app.use(VueFire, {
 app.use(createPinia())
 app.use(router)
 app.use(VueSweetalert2);
+app.use(MotionPlugin)
 app.mount('#app')

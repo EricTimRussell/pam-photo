@@ -1,6 +1,6 @@
 
 <template>
-  <header>
+  <header v-motion-pop>
     <NavbarComponent />
   </header>
 

@@ -8,45 +8,45 @@
     </div>
     <div class="row justify-content-center pt-5">
       <!-- photo row 1 -->
-      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl1" alt="" data-bs-toggle="modal" data-bs-target="#featured1">
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-4 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl2" alt="" data-bs-toggle="modal" data-bs-target="#featured2">
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-4 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl3" alt="" data-bs-toggle="modal" data-bs-target="#featured3">
       </div>
     </div>
     <!-- photo row 2 -->
     <div class="row justify-content-center">
-      <div class="col-12 col-md-5 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-5 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-top>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl4" alt="" data-bs-toggle="modal" data-bs-target="#featured4">
       </div>
-      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-top>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl5" alt="" data-bs-toggle="modal" data-bs-target="#featured5">
       </div>
-      <div class="col-12 col-md-3 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-3 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-top>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl6" alt="" data-bs-toggle="modal" data-bs-target="#featured6">
       </div>
     </div>
     <!-- photo row 3 -->
     <div class="row justify-content-center">
-      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl7" alt="" data-bs-toggle="modal" data-bs-target="#featured7">
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-6 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl8" alt="" data-bs-toggle="modal" data-bs-target="#featured8">
       </div>
-      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x">
+      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl9" alt="" data-bs-toggle="modal" data-bs-target="#featured9">
       </div>
@@ -119,6 +119,7 @@ export default {
     const { url: imageUrl7 } = useStorageFile(featuredImg7);
     const { url: imageUrl8 } = useStorageFile(featuredImg8);
     const { url: imageUrl9 } = useStorageFile(featuredImg9);
+
     return {
       imageUrl1,
       imageUrl2,
