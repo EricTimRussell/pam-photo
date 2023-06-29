@@ -21,12 +21,15 @@
 </template>
 
 <script>
-import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
-import { useFirebaseStorage, useFirestore, useStorageFile } from "vuefire";
+// Firebase
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore"
+import { useFirebaseStorage, useFirestore, useStorageFile } from "vuefire"
 import { ref as storageRef } from 'firebase/storage'
-import { appState } from "../stores/AppState";
+// Stores
+import { appState } from "../stores/AppState"
+// Vue
 import { computed } from "@vue/reactivity"
-import { onMounted } from "vue";
+import { onMounted } from "vue"
 export default {
   setup() {
     const db = useFirestore()

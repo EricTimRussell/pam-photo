@@ -9,15 +9,15 @@
     <div class="carousel-container">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img oncontextmenu="return false" ondragstart="return false" :src="url1" class="carousel-img selectable"
+          <img oncontextmenu="return false" ondragstart="return false" :src="imageUrl1" class="carousel-img selectable"
             data-bs-toggle="modal" data-bs-target="#carousel-Img1-modal" alt="...">
         </div>
         <div class="carousel-item">
-          <img oncontextmenu="return false" ondragstart="return false" :src="url2" class="carousel-img selectable"
+          <img oncontextmenu="return false" ondragstart="return false" :src="imageUrl2" class="carousel-img selectable"
             data-bs-toggle="modal" data-bs-target="#carousel-Img2-modal" alt="...">
         </div>
         <div class="carousel-item">
-          <img oncontextmenu="return false" ondragstart="return false" :src="url3" class="carousel-img selectable"
+          <img oncontextmenu="return false" ondragstart="return false" :src="imageUrl3" class="carousel-img selectable"
             data-bs-toggle="modal" data-bs-target="#carousel-Img3-modal" alt="...">
         </div>
       </div>
@@ -41,7 +41,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImageCard :url1="url1" :carousel="carousel[0]" />
+          <CarouselImageCard :imageUrl1="imageUrl1" :carousel="carousel[0]" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -57,7 +57,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImageCard :url2="url2" :carousel="carousel[1]" />
+          <CarouselImageCard :imageUrl2="imageUrl2" :carousel="carousel[1]" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -73,7 +73,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImageCard :url3="url3" :carousel="carousel[2]" />
+          <CarouselImageCard :imageUrl3="imageUrl3" :carousel="carousel[2]" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -84,10 +84,10 @@
 </template>
 
 <script>
+// Firebase
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
-// Unknown ts error?
-// @ts-ignore
+// Components
 import CarouselImageCard from "../components/carousel/CarouselImageCard.vue";
 export default {
   props: {
@@ -98,13 +98,13 @@ export default {
     const carouselImg1 = storageRef(storage, `carouselImg1`);
     const carouselImg2 = storageRef(storage, `carouselImg2`);
     const carouselImg3 = storageRef(storage, `carouselImg3`);
-    const { url: url1 } = useStorageFile(carouselImg1);
-    const { url: url2 } = useStorageFile(carouselImg2);
-    const { url: url3 } = useStorageFile(carouselImg3);
+    const { url: imageUrl1 } = useStorageFile(carouselImg1);
+    const { url: imageUrl2 } = useStorageFile(carouselImg2);
+    const { url: imageUrl3 } = useStorageFile(carouselImg3);
     return {
-      url1,
-      url2,
-      url3
+      imageUrl1,
+      imageUrl2,
+      imageUrl3
     };
   },
   components: { CarouselImageCard }

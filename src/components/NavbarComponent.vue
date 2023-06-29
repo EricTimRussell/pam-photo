@@ -71,7 +71,8 @@
 </template>
 
 <script>
-import { RouterLink } from "vue-router";
+// Vue
+import { RouterLink } from "vue-router"
 
 export default {
   setup() {

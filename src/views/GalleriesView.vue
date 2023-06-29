@@ -25,14 +25,18 @@
 </template>
 
 <script>
-import { useCurrentUser, useFirestore } from "vuefire";
+// Firebase
+import { useCurrentUser, useFirestore } from "vuefire"
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore"
+// Stores
 import { appState } from "../stores/AppState"
+// Vue
 import { computed } from "@vue/reactivity"
-import { onMounted } from "vue";
-import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
-import GalleryFormComponent from "../components/GalleryFormComponent.vue";
-import ModalComponent from "../components/ModalComponent.vue";
-import GalleryCardComponent from "../components/GalleryCardComponent.vue";
+import { onMounted } from "vue"
+// Components
+import GalleryFormComponent from "../components/GalleryFormComponent.vue"
+import ModalComponent from "../components/ModalComponent.vue"
+import GalleryCardComponent from "../components/GalleryCardComponent.vue"
 
 export default {
   setup() {

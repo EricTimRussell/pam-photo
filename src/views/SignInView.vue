@@ -17,11 +17,14 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import { useFirebaseAuth, useFirestore } from "vuefire";
-import { signInWithEmailAndPassword } from "@firebase/auth";
-import { useRouter } from "vue-router";
-import Swal from "sweetalert2";
+// Firebase
+import { useFirebaseAuth, useFirestore } from "vuefire"
+import { signInWithEmailAndPassword } from "@firebase/auth"
+// Vue
+import { ref } from "vue"
+import { useRouter } from "vue-router"
+// CSS
+import Swal from "sweetalert2"
 export default {
   setup() {
     const router = useRouter()

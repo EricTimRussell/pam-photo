@@ -14,9 +14,12 @@
 </template>
 
 <script>
-import { doc } from "firebase/firestore";
-import { ref, watch } from "vue";
-import { useDocument, useFirestore } from "vuefire";
+// Firebae
+import { doc } from "firebase/firestore"
+import { useDocument, useFirestore } from "vuefire"
+// Vue
+import { ref, watch } from "vue"
+// Services
 import { summaryService } from "../services/SummaryService"
 
 export default {

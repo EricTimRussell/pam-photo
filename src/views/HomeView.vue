@@ -24,15 +24,18 @@
 </template>
 
 <script>
-import FeaturedImagesComponent from "../components/FeaturedImagesComponent.vue";
-import HeroComponent from "../components/HeroComponent.vue";
-import SummaryCardComponent from "../components/SummaryCardComponent.vue";
+// Firebase
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore"
+import { useFirestore } from "vuefire"
+// Stores
 import { appState } from "../stores/AppState"
+// Vue
 import { computed } from "@vue/reactivity"
-import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
-import { useFirestore } from "vuefire";
-import { onMounted } from "vue";
-
+import { onMounted } from "vue"
+// Components
+import FeaturedImagesComponent from "../components/FeaturedImagesComponent.vue"
+import HeroComponent from "../components/HeroComponent.vue"
+import SummaryCardComponent from "../components/SummaryCardComponent.vue"
 export default {
   setup() {
     const db = useFirestore()

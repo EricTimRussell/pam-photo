@@ -46,7 +46,7 @@
           Edit Details
         </button>
         <ModalComponent id="summary">
-          <SummaryForm :summary="summary[0]" />
+          <SummaryFormComponent :summary="summary[0]" />
         </ModalComponent>
       </div>
     </div>
@@ -180,41 +180,43 @@
 </template>
 
 <script>
-import { useCurrentUser, useFirestore } from "vuefire";
+// Firebase
+import { useCurrentUser, useFirestore } from "vuefire"
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore"
+// Stores
 import { appState } from "../stores/AppState"
+// Vue
 import { computed } from "@vue/reactivity"
-import { onMounted } from "vue";
-import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
-
+import { onMounted } from "vue"
 // Components
-import CarouselImg1FormComponent from "../components/carousel/CarouselImg1FormComponent.vue";
-import CarouselImg2FormComponent from "../components/carousel/CarouselImg2FormComponent.vue";
-import CarouselImg3FormComponent from "../components/carousel/CarouselImg3FormComponent.vue";
-import FeaturedImage1FormComponent from "../components/featuredImages/FeaturedImage1FormComponent.vue";
-import FeaturedImage2FormComponent from "../components/featuredImages/FeaturedImage2FormComponent.vue";
-import FeaturedImage3FormComponent from "../components/featuredImages/FeaturedImage3FormComponent.vue";
-import FeaturedImage4FormComponet from "../components/featuredImages/FeaturedImage4FormComponet.vue";
-import FeaturedImage5FormComponent from "../components/featuredImages/FeaturedImage5FormComponent.vue";
-import FeaturedImage6FormComponent from "../components/featuredImages/FeaturedImage6FormComponent.vue";
-import FeaturedImage7FormComponent from "../components/featuredImages/FeaturedImage7FormComponent.vue";
-import FeaturedImage8FormComponent from "../components/featuredImages/FeaturedImage8FormComponent.vue";
-import FeaturedImage9FormComponent from "../components/featuredImages/FeaturedImage9FormComponent.vue";
-import CarouselImage1DetailsForm from "../components/carousel/CarouselImage1DetailsForm.vue";
-import ModalComponent from "../components/ModalComponent.vue";
-import CarouselImage2DetailsForm from "../components/carousel/CarouselImage2DetailsForm.vue";
-import CarouselImage3DetailsForm from "../components/carousel/CarouselImage3DetailsForm.vue";
-import FeaturedImage1DetailsForm from "../components/featuredImages/FeaturedImage1DetailsForm.vue";
-import FeaturedImage2DetailsForm from "../components/featuredImages/FeaturedImage2DetailsForm.vue";
-import FeaturedImage3DetailsForm from "../components/featuredImages/FeaturedImage3DetailsForm.vue";
-import FeaturedImage4DetailsForm from "../components/featuredImages/FeaturedImage4DetailsForm.vue";
-import FeaturedImage5DetailsForm from "../components/featuredImages/FeaturedImage5DetailsForm.vue";
-import FeaturedImage6DetailsForm from "../components/featuredImages/FeaturedImage6DetailsForm.vue";
-import FeaturedImage7DetailsForm from "../components/featuredImages/FeaturedImage7DetailsForm.vue";
-import FeaturedImage8DetailsForm from "../components/featuredImages/FeaturedImage8DetailsForm.vue";
-import FeaturedImage9DetailsForm from "../components/featuredImages/FeaturedImage9DetailsForm.vue";
-import SummaryForm from "../components/SummaryForm.vue";
-import AboutFormComponent from "../components/AboutFormComponent.vue";
-import AboutImageFormComponent from "../components/AboutImageFormComponent.vue";
+import CarouselImg1FormComponent from "../components/carousel/CarouselImg1FormComponent.vue"
+import CarouselImg2FormComponent from "../components/carousel/CarouselImg2FormComponent.vue"
+import CarouselImg3FormComponent from "../components/carousel/CarouselImg3FormComponent.vue"
+import FeaturedImage1FormComponent from "../components/featuredImages/FeaturedImage1FormComponent.vue"
+import FeaturedImage2FormComponent from "../components/featuredImages/FeaturedImage2FormComponent.vue"
+import FeaturedImage3FormComponent from "../components/featuredImages/FeaturedImage3FormComponent.vue"
+import FeaturedImage4FormComponet from "../components/featuredImages/FeaturedImage4FormComponet.vue"
+import FeaturedImage5FormComponent from "../components/featuredImages/FeaturedImage5FormComponent.vue"
+import FeaturedImage6FormComponent from "../components/featuredImages/FeaturedImage6FormComponent.vue"
+import FeaturedImage7FormComponent from "../components/featuredImages/FeaturedImage7FormComponent.vue"
+import FeaturedImage8FormComponent from "../components/featuredImages/FeaturedImage8FormComponent.vue"
+import FeaturedImage9FormComponent from "../components/featuredImages/FeaturedImage9FormComponent.vue"
+import CarouselImage1DetailsForm from "../components/carousel/CarouselImage1DetailsForm.vue"
+import ModalComponent from "../components/ModalComponent.vue"
+import CarouselImage2DetailsForm from "../components/carousel/CarouselImage2DetailsForm.vue"
+import CarouselImage3DetailsForm from "../components/carousel/CarouselImage3DetailsForm.vue"
+import FeaturedImage1DetailsForm from "../components/featuredImages/FeaturedImage1DetailsForm.vue"
+import FeaturedImage2DetailsForm from "../components/featuredImages/FeaturedImage2DetailsForm.vue"
+import FeaturedImage3DetailsForm from "../components/featuredImages/FeaturedImage3DetailsForm.vue"
+import FeaturedImage4DetailsForm from "../components/featuredImages/FeaturedImage4DetailsForm.vue"
+import FeaturedImage5DetailsForm from "../components/featuredImages/FeaturedImage5DetailsForm.vue"
+import FeaturedImage6DetailsForm from "../components/featuredImages/FeaturedImage6DetailsForm.vue"
+import FeaturedImage7DetailsForm from "../components/featuredImages/FeaturedImage7DetailsForm.vue"
+import FeaturedImage8DetailsForm from "../components/featuredImages/FeaturedImage8DetailsForm.vue"
+import FeaturedImage9DetailsForm from "../components/featuredImages/FeaturedImage9DetailsForm.vue"
+import SummaryFormComponent from "../components/SummaryFormComponent.vue"
+import AboutFormComponent from "../components/AboutFormComponent.vue"
+import AboutImageFormComponent from "../components/AboutImageFormComponent.vue"
 export default {
   setup() {
     const user = useCurrentUser()
@@ -302,7 +304,7 @@ export default {
       about: computed(() => appState.about)
     };
   },
-  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm, FeaturedImage1DetailsForm, FeaturedImage2DetailsForm, FeaturedImage3DetailsForm, FeaturedImage4DetailsForm, FeaturedImage5DetailsForm, FeaturedImage6DetailsForm, FeaturedImage7DetailsForm, FeaturedImage8DetailsForm, FeaturedImage9DetailsForm, SummaryForm, AboutFormComponent, AboutImageFormComponent }
+  components: { CarouselImg1FormComponent, CarouselImg2FormComponent, CarouselImg3FormComponent, FeaturedImage1FormComponent, FeaturedImage2FormComponent, FeaturedImage3FormComponent, FeaturedImage4FormComponet, FeaturedImage5FormComponent, FeaturedImage6FormComponent, FeaturedImage7FormComponent, FeaturedImage8FormComponent, FeaturedImage9FormComponent, ModalComponent, CarouselImage1DetailsForm, CarouselImage2DetailsForm, CarouselImage3DetailsForm, FeaturedImage1DetailsForm, FeaturedImage2DetailsForm, FeaturedImage3DetailsForm, FeaturedImage4DetailsForm, FeaturedImage5DetailsForm, FeaturedImage6DetailsForm, FeaturedImage7DetailsForm, FeaturedImage8DetailsForm, FeaturedImage9DetailsForm, SummaryFormComponent, AboutFormComponent, AboutImageFormComponent }
 }
 </script>
 
