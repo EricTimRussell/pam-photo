@@ -1,12 +1,3 @@
-<script setup>
-import { RouterView } from 'vue-router'
-import NavbarComponent from "./components/NavbarComponent.vue";
-import FooterComponent from "./components/FooterComponent.vue";
-
-
-
-
-</script>
 
 <template>
   <header>
@@ -21,6 +12,16 @@ import FooterComponent from "./components/FooterComponent.vue";
     <FooterComponent />
   </footer>
 </template>
+
+<script setup>
+// Vue
+import { RouterView } from 'vue-router'
+// Components
+import NavbarComponent from "./components/NavbarComponent.vue";
+import FooterComponent from "./components/FooterComponent.vue";
+
+
+</script>
 
 <style scoped>
 footer {
