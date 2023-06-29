@@ -45,8 +45,10 @@
 </template>
 
 <script>
-import { RouterLink } from "vue-router";
+// Firebase
 import { useCurrentUser } from "vuefire";
+// Vue
+import { RouterLink } from "vue-router";
 export default {
   setup() {
     const user = useCurrentUser()

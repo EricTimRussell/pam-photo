@@ -73,10 +73,11 @@
   </div>
 </template>
 <script>
-import { deleteDoc, doc } from "firebase/firestore";
-import Swal from "sweetalert2";
-import { useCurrentUser, useFirestore } from "vuefire";
-
+// Firebase
+import { deleteDoc, doc } from "firebase/firestore"
+import { useCurrentUser, useFirestore } from "vuefire"
+// CSS
+import Swal from "sweetalert2"
 export default {
   props: {
     galleries: { type: Object, required: true }
@@ -122,6 +123,18 @@ a {
   color: none;
 }
 
+.flickr-title {
+  color: blue;
+  text-shadow: 3px 2px #d9d9d9;
+  font-weight: bolder;
+  letter-spacing: 7px;
+}
+
+.delete-icon:hover {
+  transform: scale(1.5);
+}
+
+// SECTION themes CSS
 .flickr-birds {
   background-image: url(../assets/galleries/birds.jpg);
   background-size: cover;
@@ -239,16 +252,5 @@ a {
 .flickr-sunsets:hover {
   border: 3px solid blue;
   transform: scale(1.1);
-}
-
-.flickr-title {
-  color: blue;
-  text-shadow: 3px 2px #d9d9d9;
-  font-weight: bolder;
-  letter-spacing: 7px;
-}
-
-.delete-icon:hover {
-  transform: scale(1.5);
 }
 </style>

@@ -16,9 +16,11 @@
 </template>
 
 <script setup lang="ts">
-import { useFileDialog } from '@vueuse/core'
+// Firebase
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
+// Vue
+import { useFileDialog } from '@vueuse/core'
 
 const { files, open } = useFileDialog()
 const storage = useFirebaseStorage()
@@ -26,10 +28,7 @@ const aboutImg = storageRef(storage, `aboutImg`)
 
 const {
   url,
-  // gives you a percentage between 0 and 1 of the upload progress
   uploadProgress,
-  uploadError,
-  // firebase upload task
   uploadTask,
   upload,
 } = useStorageFile(aboutImg)

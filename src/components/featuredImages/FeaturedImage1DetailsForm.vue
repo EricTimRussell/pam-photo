@@ -28,10 +28,13 @@
   </form>
 </template>
 <script>
-import { doc } from "firebase/firestore";
-import { ref, watch } from "vue";
-import { useDocument, useFirestore } from "vuefire";
-import { featuredPhotosService } from "../../services/FeaturedPhotosService";
+// Firebase
+import { doc } from "firebase/firestore"
+import { useDocument, useFirestore } from "vuefire"
+// Vue
+import { ref, watch } from "vue"
+// Services
+import { featuredPhotosService } from "../../services/FeaturedPhotosService"
 export default {
   props: {
     featured: { type: Object, required: true }

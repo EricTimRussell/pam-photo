@@ -88,16 +88,20 @@
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
 // Components
-import CarouselImageCard from "../components/carousel/CarouselImageCard.vue";
+import CarouselImageCard from "../components/carousel/CarouselImageCard.vue"
 export default {
   props: {
     carousel: { type: Object, required: true }
   },
   setup() {
     const storage = useFirebaseStorage();
+
+    // get images from firebase storage
     const carouselImg1 = storageRef(storage, `carouselImg1`);
     const carouselImg2 = storageRef(storage, `carouselImg2`);
     const carouselImg3 = storageRef(storage, `carouselImg3`);
+
+    // set and rename image urls
     const { url: imageUrl1 } = useStorageFile(carouselImg1);
     const { url: imageUrl2 } = useStorageFile(carouselImg2);
     const { url: imageUrl3 } = useStorageFile(carouselImg3);

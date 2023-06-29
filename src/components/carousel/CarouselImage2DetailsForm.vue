@@ -28,10 +28,12 @@
   </form>
 </template>
 <script>
-import { doc } from "firebase/firestore";
-import { ref, watch } from "vue";
-import { useDocument, useFirestore } from "vuefire";
-import { carouselDetailsService } from "../../services/CarouselDetailsService";
+import { doc } from "firebase/firestore"
+import { useDocument, useFirestore } from "vuefire"
+// Vue
+import { ref, watch } from "vue"
+// Services
+import { carouselDetailsService } from "../../services/CarouselDetailsService"
 export default {
   props: {
     carousel: { type: Object, required: true }

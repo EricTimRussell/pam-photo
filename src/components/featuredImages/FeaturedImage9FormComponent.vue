@@ -16,9 +16,11 @@
 </template>
 
 <script setup lang="ts">
-import { useFileDialog } from '@vueuse/core'
+// Firebase
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
+// Vue
+import { useFileDialog } from '@vueuse/core'
 
 const { files, open } = useFileDialog()
 const storage = useFirebaseStorage()

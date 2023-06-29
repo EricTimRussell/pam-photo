@@ -14,9 +14,12 @@
 </template>
 
 <script>
-import { doc } from "firebase/firestore";
-import { ref, watch } from "vue";
-import { useDocument, useFirestore } from "vuefire";
+// Firebase
+import { doc } from "firebase/firestore"
+import { useDocument, useFirestore } from "vuefire"
+// Vue
+import { ref, watch } from "vue"
+// Services
 import { aboutService } from "../services/AboutService"
 export default {
   props: {
@@ -24,7 +27,7 @@ export default {
   },
   setup(props) {
     const db = useFirestore()
-    const about = doc(db, "aboutSection", "about");
+    const about = doc(db, "aboutSection", "about")
     const aboutSource = useDocument(about)
 
     const editable = ref({})
