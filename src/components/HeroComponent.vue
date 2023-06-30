@@ -120,12 +120,12 @@ export default {
   object-fit: fill;
   display: block;
   min-width: 100%;
-  height: 60vh;
+  height: 65vh;
 }
 
 .carousel-container {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .ml {
@@ -153,8 +153,8 @@ export default {
   }
 
   .carousel-container {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 </style>
