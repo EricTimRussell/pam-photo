@@ -8,7 +8,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -18,7 +18,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -27,7 +27,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -36,7 +36,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -45,7 +45,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -54,7 +54,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -63,7 +63,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -72,7 +72,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -81,7 +81,7 @@ class FeaturedPhotosService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 }

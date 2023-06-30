@@ -16,9 +16,9 @@
         </span>
         <p>{{ carousel?.location }}</p>
       </div>
-      <div class="col-6 d-flex justify-content-evenly mt-3">
+      <div v-if="carousel?.shopUrl" class="col-6 d-flex justify-content-evenly mt-3">
         <!-- TODO add shop url -->
-        <a href="" title="Shop"><span class="material-symbols-outlined">
+        <a :href="carousel?.shopUrl" title="Shop"><span class="material-symbols-outlined">
             shopping_bag
           </span></a>
       </div>

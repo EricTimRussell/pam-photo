@@ -7,7 +7,7 @@ class CarouselDetailsService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -16,7 +16,7 @@ class CarouselDetailsService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 
@@ -25,7 +25,7 @@ class CarouselDetailsService {
       title: editable.value.title,
       description: editable.value.description,
       location: editable.value.location,
-      date: editable.value.date
+      shopUrl: editable.value.shopUrl
     });
   }
 }

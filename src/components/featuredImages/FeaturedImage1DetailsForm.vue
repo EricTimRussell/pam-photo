@@ -12,9 +12,9 @@
       <label for="description">Description</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="text" v-model="editable.location" maxlength="32" class="form-control" id="location"
-        placeholder="Photo Location" required>
-      <label for="location">Loaction</label>
+      <input type="text" v-model="editable.shopUrl" maxlength="100" class="form-control" id="shopUrl"
+        placeholder="shop Url" required>
+      <label for="shopUrl">Product URL</label>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>

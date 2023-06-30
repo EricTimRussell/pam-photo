@@ -17,9 +17,9 @@
         </span>
         <p>{{ featured?.location }}</p>
       </div>
-      <div class="col-6 d-flex justify-content-evenly mt-3">
+      <div v-if="featured?.shopUrl" class="col-6 d-flex justify-content-evenly mt-3">
         <!-- TODO add shop url -->
-        <a href="" title="Shop"><span class="material-symbols-outlined">
+        <a :href="featured?.shopUrl" title="Shop"><span class="material-symbols-outlined">
             shopping_bag
           </span></a>
       </div>
