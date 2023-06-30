@@ -22,6 +22,7 @@
             <RouterLink to="/galleries">
               <span class="fs-sm">Galleries</span>
             </RouterLink>
+            <!-- TODO add shop href -->
             <a href="" target="_blank">
               <span class="fs-sm">Shop</span>
             </a>

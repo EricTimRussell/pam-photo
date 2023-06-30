@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid view-height">
+  <div class="container-fluid view-height fade-in">
     <div class="row justify-content-center my-5">
       <div class="col-12">
         <a target="_blank" class="selectable" href="https://www.flickr.com/photos/197012563@N05/">
@@ -9,7 +9,7 @@
     </div>
     <div class="row justify-content-center bg-secondary elevation">
       <!-- TODO add store contact href -->
-      <div class="col-8 my-5">
+      <div class="col-10 my-5">
         <a target="_blank" class="selectable" href="">
           <img class="banner-mobile banner" src="../assets/Get-Outside-Store-Banner.png"
             alt="get outside photography store banner">
@@ -43,7 +43,7 @@ export default {
 .banner {
   max-width: 100%;
   height: auto;
-  border: 5px solid black;
+  border: 2px solid black;
 }
 
 .banner:hover {

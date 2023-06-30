@@ -18,16 +18,16 @@
       </div>
     </div>
     <!-- Admin controls -->
-    <div class="row justify-content-between">
-      <div class="col-6 d-flex justify-content-start p-3" title="Email Get Oustide Photography">
-        <span class="material-symbols-outlined fs-md">
+    <div class="row justify-content-between pt-2">
+      <div class="col-6 d-flex justify-content-start p-3 text-light" title="Email Get Oustide Photography">
+        <span class="material-symbols-outlined fs-sm">
           mail
         </span>
         <a href="mailto:getoutsidephotography@outlook.com">
           <p>Email</p>
         </a>
       </div>
-      <div class="col-1 d-flex justify-content-end btn-group dropup">
+      <div class="col-1 d-flex justify-content-end btn-group dropup pt-3">
         <i class="selectable text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
           <span class="material-symbols-outlined fs-sm">
             admin_panel_settings
