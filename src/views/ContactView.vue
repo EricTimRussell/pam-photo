@@ -1,15 +1,15 @@
 <template>
   <div class="container-fluid view-height fade-in">
-    <div class="row justify-content-center my-5">
-      <div class="col-12">
+    <div class="row justify-content-center my-3">
+      <div class="col-10">
         <a target="_blank" class="selectable" href="https://www.flickr.com/photos/197012563@N05/">
           <img class="banner-mobile banner" src="../assets/flickrBG.png" alt="flickr profile image">
         </a>
       </div>
     </div>
-    <div class="row justify-content-center bg-secondary elevation">
+    <div class="row justify-content-center bg-secondary elevation my-3">
       <!-- TODO add store contact href -->
-      <div class="col-10 my-5">
+      <div class="col-10 py-3">
         <a target="_blank" class="selectable" href="">
           <img class="banner-mobile banner" src="../assets/Get-Outside-Store-Banner.png"
             alt="get outside photography store banner">
@@ -62,7 +62,7 @@ export default {
   }
 
   .view-height {
-    min-height: 50vh;
+    min-height: 43vh;
   }
 }
 </style>
