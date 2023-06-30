@@ -16,16 +16,6 @@
         </a>
       </div>
     </div>
-    <div class="row my-5">
-      <div class="col-12 d-flex justify-content-center p-3">
-        <span class="material-symbols-outlined fs-lg">
-          mail
-        </span>
-        <a href="mailto:getoutsidephotography@outlook.com">
-          <p>Email Get Outside Photography</p>
-        </a>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -52,7 +42,16 @@ export default {
 
 .banner {
   max-width: 100%;
-  height: auto
+  height: auto;
+  border: 5px solid black;
+}
+
+.banner:hover {
+  border-color: blue;
+}
+
+.banner:active {
+  border-color: blue;
 }
 
 @media (max-width: 767px) {

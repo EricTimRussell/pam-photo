@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-12 col-md-8 col-lg-8">
         <img class="modal-img" oncontextmenu="return false" ondragstart="return false"
-          :src="url1 || url2 || url3 || url4 || url5 || url6 || url7 || url8 || url9" alt="">
+          :src="imageUrl1 || imageUrl2 || imageUrl3 || imageUrl4 || imageUrl5 || imageUrl6 || imageUrl7 || imageUrl8 || imageUrl9"
+          alt="">
       </div>
       <div class="col-12 col-md-4 col-lg-4 d-flex flex-column pt-4">
         <h2>{{ featured?.title }}</h2>
@@ -28,15 +29,15 @@
 
 export default {
   props: {
-    url1: { type: String, required: false },
-    url2: { type: String, required: false },
-    url3: { type: String, required: false },
-    url4: { type: String, required: false },
-    url5: { type: String, required: false },
-    url6: { type: String, required: false },
-    url7: { type: String, required: false },
-    url8: { type: String, required: false },
-    url9: { type: String, required: false },
+    imageUrl1: { type: String, required: false },
+    imageUrl2: { type: String, required: false },
+    imageUrl3: { type: String, required: false },
+    imageUrl4: { type: String, required: false },
+    imageUrl5: { type: String, required: false },
+    imageUrl6: { type: String, required: false },
+    imageUrl7: { type: String, required: false },
+    imageUrl8: { type: String, required: false },
+    imageUrl9: { type: String, required: false },
     featured: { type: Object, required: false }
   },
   setup() {

@@ -18,7 +18,15 @@
       </div>
     </div>
     <!-- Admin controls -->
-    <div class="row justify-content-end py-4">
+    <div class="row justify-content-between">
+      <div class="col-6 d-flex justify-content-start p-3" title="Email Get Oustide Photography">
+        <span class="material-symbols-outlined fs-md">
+          mail
+        </span>
+        <a href="mailto:getoutsidephotography@outlook.com">
+          <p>Email</p>
+        </a>
+      </div>
       <div class="col-1 d-flex justify-content-end btn-group dropup">
         <i class="selectable text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
           <span class="material-symbols-outlined fs-sm">
