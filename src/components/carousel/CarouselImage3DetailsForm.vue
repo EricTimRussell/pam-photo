@@ -16,11 +16,6 @@
         placeholder="Photo Location" required>
       <label for="location">Loaction</label>
     </div>
-    <div class="form-floating mb-3">
-      <input type="text" v-model="editable.date" maxlength="20" class="form-control" id="date" placeholder="Photo date"
-        required>
-      <label for="date">Date Taken</label>
-    </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
       <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>

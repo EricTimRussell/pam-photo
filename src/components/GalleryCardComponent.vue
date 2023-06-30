@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO make gallery bg images lower quality -->
   <div v-if="galleries.theme == 'birds'" class="flickr-birds mb-5">
     <span v-if="user" @click="deleteGallery()" title="delete"
       class="material-symbols-outlined fs-sm text-danger selectable delete-icon p-2">
