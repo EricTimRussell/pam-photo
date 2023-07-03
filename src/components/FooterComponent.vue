@@ -43,7 +43,7 @@
           </li>
           <li class="text-center">
             <RouterLink v-if="user" :to="{ name: 'Admin', params: { id: user?.uid } }">
-              <span v-if="user.uid === '1B6XbfRQ8nOsoqNO2dYAJ6heoVF2'">Admin</span>
+              <span v-if="user">Admin</span>
             </RouterLink>
           </li>
         </ul>
