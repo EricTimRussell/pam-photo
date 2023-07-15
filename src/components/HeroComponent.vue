@@ -117,10 +117,13 @@ export default {
 
 <style scoped>
 .carousel-img {
-  object-fit: fill;
+  object-fit: contain;
   display: block;
-  min-width: 100%;
-  height: 65vh;
+  width: 100%;
+  height: 55vh;
+  background-color: #c8c8c8;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .carousel-container {
