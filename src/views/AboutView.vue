@@ -12,7 +12,7 @@
         <div class="col-sm-12 col-md-4">
           <img class="personal-img" :src="personalImg || undefined" alt="">
         </div>
-        <div class="col-sm-12 col-md-7 d-flex px-4">
+        <div class="col-sm-12 col-md-7 d-flex px-4 fs-md">
           <p>{{ about?.about }}</p>
         </div>
       </div>

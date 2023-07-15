@@ -9,7 +9,7 @@
     </div>
     <div class="row justify-content-center bg-secondary elevation my-3">
       <!-- TODO add store contact href -->
-      <div class="col-10 py-3">
+      <div class="col-md-6 col-10 py-3">
         <a target="_blank" class="selectable" href="">
           <img class="banner-mobile banner" src="../assets/Get-Outside-Store-Banner.png"
             alt="get outside photography store banner">

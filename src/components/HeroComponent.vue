@@ -118,7 +118,6 @@ export default {
 <style scoped>
 .carousel-img {
   object-fit: contain;
-  display: block;
   width: 100%;
   height: 55vh;
   background-color: #c8c8c8;
@@ -145,6 +144,11 @@ export default {
     display: block;
     width: auto;
     height: 15rem;
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: center;
   }
 
   .ml {

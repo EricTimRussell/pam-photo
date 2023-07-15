@@ -125,10 +125,10 @@
     <!-- SECTION Featured Images Row 3 -->
     <div class="row bg-secondary py-3 elevation">
       <div class="col-12 text-center mt-3">
-        <h2>Featured Images Row 3</h2>
+        <h2>Featured Images Row 3 & 4</h2>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Portrait Size</h3>
+        <h3>Regular Size</h3>
         <FeaturedImage7FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured7">
           Edit Details
@@ -148,7 +148,7 @@
         </ModalComponent>
       </div>
       <div class="col-4 d-flex flex-column align-items-center mt-3">
-        <h3>Portrait Size</h3>
+        <h3>Regular Size</h3>
         <FeaturedImage9FormComponent />
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featured9">
           Edit Details
