@@ -38,15 +38,22 @@
     </div>
     <!-- photo row 3 -->
     <div class="row justify-content-center">
-      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
-        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
-          :src="imageUrl7" alt="" data-bs-toggle="modal" data-bs-target="#featured7">
+      <div class="col-1 bg-dark mt-2">
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
+      <div class="col-12 col-md-8 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl8" alt="" data-bs-toggle="modal" data-bs-target="#featured8">
       </div>
-      <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
+      <div class="col-1 bg-dark mt-2">
+      </div>
+    </div>
+    <!-- photo row 4 -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-5 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
+        <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
+          :src="imageUrl7" alt="" data-bs-toggle="modal" data-bs-target="#featured7">
+      </div>
+      <div class="col-12 col-md-5 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
           :src="imageUrl9" alt="" data-bs-toggle="modal" data-bs-target="#featured9">
       </div>
