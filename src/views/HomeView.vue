@@ -99,7 +99,7 @@ export default {
     return {
       carousel: computed(() => appState.carousel),
       featured: computed(() => appState.featuredImages),
-      summary: computed(() => appState.summary)
+      summary: computed(() => appState.summary),
     };
   },
   components: { HeroComponent, FeaturedImagesComponent, SummaryCardComponent }
