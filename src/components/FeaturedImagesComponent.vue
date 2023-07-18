@@ -5,8 +5,11 @@
       <div class="col-12 d-flex justify-content-center">
         <span class="section-divider"></span>
       </div>
+      <div class="col-12 d-flex justify-content-center pt-3">
+        <span class="fs-sm mobile-only">Tap photos for more details</span>
+      </div>
     </div>
-    <div class="row justify-content-center pt-5">
+    <div class="row justify-content-center pt-3">
       <!-- photo row 1 -->
       <div class="col-12 col-md-2 d-flex justify-content-center pt-2 small-pad-x" v-motion-slide-visible-once-bottom>
         <img oncontextmenu="return false" ondragstart="return false" class="featured-img elevation selectable"
