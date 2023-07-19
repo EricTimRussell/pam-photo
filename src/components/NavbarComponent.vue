@@ -20,7 +20,7 @@
               <span class="fs-sm">Contact</span>
             </RouterLink>
             <RouterLink to="/galleries">
-              <span class="fs-sm">Galleries</span>
+              <span class="fs-sm">Albums</span>
             </RouterLink>
             <!-- TODO add shop href -->
             <a href="" target="_blank">
@@ -61,9 +61,9 @@
           <span class="fs-sm">Contact</span>
         </RouterLink>
         <RouterLink to="/galleries">
-          <span class="fs-sm px-4">Galleries</span>
+          <span class="fs-sm px-4">Albums</span>
         </RouterLink>
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a href="https://getoutsidephotography.shop/" target="_blank">
           <span class="fs-sm">Shop</span>
         </a>
       </div>

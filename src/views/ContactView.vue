@@ -17,10 +17,9 @@
       </div>
     </div>
     <div class="row justify-content-center bg-secondary elevation mt-5">
-      <!-- TODO add store contact href -->
       <div class="col-md-6 col-10 pt-3 pb-4">
-        <h2 class="fs-md">Support my Work</h2>
-        <a target="_blank" class="selectable" href="">
+        <h2 class="fs-md">Contact me through the store</h2>
+        <a target="_blank" class="selectable" href="https://getoutsidephotography.shop/pages/contact">
           <img class="banner" src="../assets/Get-Outside-Store-Banner.png" alt="get outside photography store banner">
         </a>
       </div>
