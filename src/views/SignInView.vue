@@ -23,8 +23,6 @@ import { signInWithEmailAndPassword } from "@firebase/auth"
 // Vue
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-// CSS
-import Swal from "sweetalert2"
 export default {
   setup() {
     const router = useRouter()
@@ -44,16 +42,12 @@ export default {
             const user = userCredential.user;
             userInput.value.email = ''
             userInput.value.password = ''
-            console.log(user);
             router.push({ name: 'home' })
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             if (errorCode === 'auth/wrong-password') {
-              Swal.fire({
-                title: 'Wrong Password/Username'
-              });
               return
             }
           });
