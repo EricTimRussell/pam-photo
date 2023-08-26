@@ -58,7 +58,7 @@
           <span class="fs-sm">Contact</span>
         </RouterLink>
         <a href="https://getoutsidephotography.shop/" target="_blank">
-          <span class="fs-sm">Shop</span>
+          <span class="fs-sm px-4">Shop</span>
         </a>
       </div>
     </nav>
