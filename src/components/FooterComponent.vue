@@ -12,9 +12,6 @@
         <RouterLink to="/contact">
           <span class="text-light">Contact</span>
         </RouterLink>
-        <RouterLink to="/galleries">
-          <span class="text-light px-4">Galleries</span>
-        </RouterLink>
       </div>
     </div>
     <!-- Admin controls -->
