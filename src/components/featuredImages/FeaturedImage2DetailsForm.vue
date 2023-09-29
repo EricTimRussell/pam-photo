@@ -16,11 +16,11 @@
         placeholder="Photo Location" required>
       <label for="location">Loaction</label>
     </div>
-    <div class="form-floating mb-3">
+    <!-- <div class="form-floating mb-3">
       <input type="text" v-model="editable.shopUrl" maxlength="100" class="form-control" id="shopUrl"
         placeholder="shop Url" required>
       <label for="shopUrl">Product URL</label>
-    </div>
+    </div> -->
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
       <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>

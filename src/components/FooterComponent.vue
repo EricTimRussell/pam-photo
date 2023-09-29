@@ -14,17 +14,33 @@
         </RouterLink>
       </div>
     </div>
-    <!-- Admin controls -->
-    <div class="row justify-content-between pt-2">
-      <div class="col-6 d-flex justify-content-start p-3 text-light" title="Email Get Oustide Photography">
-        <span class="material-symbols-outlined fs-sm">
-          mail
-        </span>
+    <div class="row">
+      <div class="col-12 mt-3 d-flex justify-content-center text-light">
         <a href="mailto:getoutsidephotography@outlook.com">
-          <p>Email</p>
+          <span class="material-symbols-outlined fs-sm" title="Email">
+            mail
+          </span>
         </a>
+        <a href="https://www.facebook.com/profile.php?id=61551677375568" target="_blank">
+          <span class="text-primary material-symbols-outlined fs-sm px-4" title="Facebook">
+            thumb_up
+          </span>
+        </a>
+        <a href="https://www.flickr.com/photos/197012563@N05/" target="_blank">
+          <span class="flickr-color material-symbols-outlined fs-sm" title="flickr">
+            camera
+          </span>
+        </a>
+        <!-- <a href="" target="_blank">
+          <span class="instagram-color material-symbols-outlined fs-sm" title="Instagram">
+            photo_camera
+          </span>
+        </a> -->
       </div>
-      <div class="col-1 d-flex justify-content-end btn-group dropup pt-3">
+    </div>
+    <!-- Admin controls -->
+    <div class="row justify-content-end">
+      <div class="col-1 d-flex justify-content-end btn-group dropup">
         <i class="selectable text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
           <span class="material-symbols-outlined fs-sm">
             admin_panel_settings
@@ -87,13 +103,26 @@ li:hover {
 a {
   color: inherit;
   font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
 }
 
-a:hover {
-  color: blue;
+a:hover{
+  transform: scale(1.1);
+}
+
+span:hover{
+  transform: scale(1.1);
 }
 
 .router-link-active {
   color: blue;
+}
+
+.instagram-color{
+ color: lightcoral;
+}
+
+.flickr-color{
+ color: hotpink;
 }
 </style>
