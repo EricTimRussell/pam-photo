@@ -36,8 +36,8 @@
   <!-- Carousel Image Modals -->
   <div class="modal fade" id="carousel-Img1-modal" tabindex="-1" aria-labelledby="carousel image" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-center">
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content modal-bg">
+        <div class="modal-header border-none">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -49,8 +49,8 @@
 
   <div class="modal fade" id="carousel-Img2-modal" tabindex="-1" aria-labelledby="carousel image" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-center">
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content modal-bg">
+        <div class="modal-header border-none">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -62,8 +62,8 @@
 
   <div class="modal fade" id="carousel-Img3-modal" tabindex="-1" aria-labelledby="carousel image" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-center">
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content modal-bg">
+        <div class="modal-header border-none">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -128,6 +128,13 @@ export default {
 
 .mr {
   margin-right: 20%;
+}
+
+.modal-bg{
+  background-color: gainsboro;
+}
+.border-none{
+  border: none;
 }
 
 @media only screen and (max-width: 770px) {
