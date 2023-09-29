@@ -41,10 +41,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <CarouselImageCard :imageUrl1="imageUrl1" :carousel="carousel[0]" />
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <Carouselimagecard :imageUrl1="imageUrl1" :carousel="carousel[0]" />
         </div>
       </div>
     </div>
@@ -59,9 +56,6 @@
         <div class="modal-body">
           <CarouselImageCard :imageUrl2="imageUrl2" :carousel="carousel[1]" />
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
       </div>
     </div>
   </div>
@@ -75,9 +69,6 @@
         <div class="modal-body">
           <CarouselImageCard :imageUrl3="imageUrl3" :carousel="carousel[2]" />
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
       </div>
     </div>
   </div>
@@ -88,7 +79,8 @@
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
 // Components
-import CarouselImageCard from "../components/carousel/CarouselImageCard.vue"
+import Carouselimagecard from '../components/carousel/Carouselimagecard.vue'
+
 export default {
   props: {
     carousel: { type: Object, required: true }
@@ -111,7 +103,7 @@ export default {
       imageUrl3
     };
   },
-  components: { CarouselImageCard }
+  components: { Carouselimagecard }
 }
 </script>
 
