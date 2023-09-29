@@ -41,7 +41,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <Carouselimagecard :imageUrl1="imageUrl1" :carousel="carousel[0]" />
+          <CarouselImageCard :imageUrl1="imageUrl1" :carousel="carousel[0]" />
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@
 import { ref as storageRef } from 'firebase/storage'
 import { useFirebaseStorage, useStorageFile } from 'vuefire'
 // Components
-import Carouselimagecard from '../components/carousel/Carouselimagecard.vue'
+import CarouselImageCard from '../components/carousel/CarouselImageCard.vue'
 
 export default {
   props: {
@@ -103,7 +103,7 @@ export default {
       imageUrl3
     };
   },
-  components: { Carouselimagecard }
+  components: { CarouselImageCard }
 }
 </script>
 
