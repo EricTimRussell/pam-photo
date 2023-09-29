@@ -27,6 +27,7 @@
     </div>
   </form>
 </template>
+
 <script>
 import { doc } from "firebase/firestore"
 import { useDocument, useFirestore } from "vuefire"
@@ -46,7 +47,6 @@ export default {
     const editable = ref({})
 
     watch(carousel2Source, (carousel2Source) => {
-      // @ts-ignore
       editable.value = {
         ...carousel2Source,
       }

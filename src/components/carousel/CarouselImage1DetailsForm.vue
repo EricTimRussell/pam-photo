@@ -27,6 +27,7 @@
     </div>
   </form>
 </template>
+
 <script>
 // Firebase
 import { doc } from "firebase/firestore"
@@ -47,7 +48,6 @@ export default {
     const editable = ref({})
 
     watch(carousel1Source, (carousel1Source) => {
-      // @ts-ignore
       editable.value = {
         ...carousel1Source,
       }

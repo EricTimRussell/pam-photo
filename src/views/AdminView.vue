@@ -36,6 +36,7 @@
         </ModalComponent>
       </div>
     </div>
+
     <!-- SECTION Summary Section -->
     <div class="row mb-3 pt-3">
       <div class="col-12 d-flex justify-content-center">
