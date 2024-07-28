@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid nav-bg-top pt-2 bg-nav">
+
     <!-- Mobile only nav -->
     <div id="nav" class="col-12 d-flex justify-content-end">
       <div class="dropdown-center mobile-only">
@@ -16,13 +17,9 @@
             <RouterLink to="/about">
               <span class="fs-sm">About</span>
             </RouterLink>
-            <RouterLink to="/contact">
+            <!-- <RouterLink to="/contact">
               <span class="fs-sm">Contact</span>
-            </RouterLink>
-            <!-- TODO add shop href -->
-            <a href="https://getoutsidephotography.shop/" target="_blank">
-              <span class="fs-sm">Shop</span>
-            </a>
+            </RouterLink> -->
           </div>
         </nav>
       </div>
@@ -44,22 +41,20 @@
       </div>
     </div>
   </div>
+
   <!-- larger screen nav -->
   <div id="nav" class="container-fluid nav-bg-bot elevation py-2 no-mobile">
     <nav class="row">
-      <div class="d-flex justify-content-center col-12">
+      <div class="d-flex justify-content-center gap-5 col-12">
         <RouterLink to="/">
           <span class="fs-sm">Home</span>
         </RouterLink>
         <RouterLink to="/about">
-          <span class="fs-sm px-4">About</span>
+          <span class="fs-sm">About</span>
         </RouterLink>
-        <RouterLink to="/contact">
+        <!-- <RouterLink to="/contact">
           <span class="fs-sm">Contact</span>
-        </RouterLink>
-        <a href="https://getoutsidephotography.shop/" target="_blank">
-          <span class="fs-sm px-4">Shop</span>
-        </a>
+        </RouterLink> -->
       </div>
     </nav>
   </div>

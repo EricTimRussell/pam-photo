@@ -2,10 +2,7 @@
   <div class="container-fluid view-height fade-in">
     <div class="row justify-content-center">
       <div class="col-md-6 col-10 text-center pt-3">
-        <h2 class="fs-md pb-3">Contact me through social media, email, or shopify.</h2>
-        <a target="_blank" class="selectable" href="https://getoutsidephotography.shop/pages/contact">
-          <img class="banner" src="../assets/Get-Outside-Store-Banner.png" alt="get outside photography store banner">
-        </a>
+        <h2 class="fs-md pb-3">Contact me through social media or email.</h2>
       </div>
     </div>
   </div>

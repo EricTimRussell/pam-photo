@@ -1,19 +1,21 @@
 <template>
   <section class="container-fluid footer-bg">
+
     <!-- large screen navigation -->
     <div class="row no-mobile">
       <div class="d-flex justify-content-center col-12 mt-3">
         <RouterLink to="/">
-          <span class="text-light">Home</span>
+          <span class="text-light">Home |</span>
         </RouterLink>
         <RouterLink to="/about">
-          <span class="text-light px-4">About</span>
+          <span class="text-light">| About</span>
         </RouterLink>
-        <RouterLink to="/contact">
+        <!-- <RouterLink to="/contact">
           <span class="text-light">Contact</span>
-        </RouterLink>
+        </RouterLink> -->
       </div>
     </div>
+
     <div class="row">
       <div class="col-12 mt-3 d-flex justify-content-center text-light">
         <a href="mailto:getoutsidephotography@outlook.com">
