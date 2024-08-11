@@ -1,5 +1,6 @@
-
 <template>
+  <meta name="Get Outside Photography" content="Browse Pamela's best photo's and find more via social media">
+
   <header v-motion-pop>
     <NavbarComponent />
   </header>
