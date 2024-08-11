@@ -1,4 +1,9 @@
 <template>
+
+  <head>
+    <meta name="robots" content="noindex">
+  </head>
+
   <body class="container-fluid view-height">
     <form class="row flex-column align-items-center">
       <div class="my-3 col-6">

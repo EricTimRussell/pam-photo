@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import SignInView from '../views/SignInView.vue'
 import AdminView from '../views/AdminView.vue'
-import ContactView from '../views/ContactView.vue'
+// import ContactView from '../views/ContactView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,11 +18,11 @@ const router = createRouter({
       name: 'About',
       component: AboutView
     },
-    {
-      path: '/contact',
-      name: 'Contact',
-      component: ContactView
-    },
+    // {
+    //   path: '/contact',
+    //   name: 'Contact',
+    //   component: ContactView
+    // },
     {
       path: '/sign-in',
       name: 'Sign-In',
